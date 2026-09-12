@@ -2,9 +2,7 @@
 
 [![Tests](https://github.com/ridoy-roy/canada-us-trade-shock-observatory/actions/workflows/tests.yml/badge.svg)](https://github.com/ridoy-roy/canada-us-trade-shock-observatory/actions/workflows/tests.yml)
 
-**Ridoy Roy | Data Analyst**
-
-**Independent Portfolio Project**
+**Ridoy Roy**
 
 ## Overview
 
@@ -162,10 +160,10 @@ influence the observed changes.
 
 ## Author
 
-**Ridoy Roy — Data Analyst**
+**Ridoy Roy**
 
 [LinkedIn](https://www.linkedin.com/in/royridoy)
 
-This portfolio project demonstrates data ingestion, quality assurance,
-policy-date modeling, product-code harmonization, visualization, and clear
-analytical communication.
+This project demonstrates data ingestion, quality assurance, policy-date
+modeling, product-code harmonization, visualization, and clear analytical
+communication.
