@@ -4,17 +4,17 @@ When the project is ready to be made public, the recommended release format is
 a GitHub repository plus the included PDF report. Keep the repository private
 until the publication decision is made.
 
-## Publish with the GitHub website
+## Publish the existing GitHub repository
 
-1. Create a new **public** repository named
-   `canada-us-trade-shock-observatory`. Do not initialize it with a README.
-2. Upload this project folder, excluding anything already covered by
-   `.gitignore`.
-3. Confirm that `.env`, `data/raw/`, `sources/`, `.venv/`, and `tmp/` are absent
-   before committing.
-4. Use the commit message `Initial release: 2025 Section 232 core steel`.
-5. Create a GitHub release tagged `v0.1.0` and attach
+1. Open the repository settings and review the visibility-change warning.
+2. Confirm that `.env`, `data/raw/`, `sources/`, `.venv/`, and `tmp/` are absent
+   from the GitHub file list.
+3. Change the existing repository from private to public only when the launch
+   post is ready.
+4. Create a GitHub release tagged `v0.1.0` and attach
    `output/pdf/canada_us_trade_shock_observatory_v0.pdf`.
+5. Open the public repository in a signed-out browser and verify the README,
+   chart, report link, and test badge.
 
 Suggested repository description:
 

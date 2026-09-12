@@ -1,21 +1,28 @@
 # LinkedIn launch post
 
-I built the Canada-U.S. Trade Shock Observatory to examine how Canadian
-core-steel imports changed around the 2025 U.S. Section 232 tariff increases.
+I recently completed the Canada-U.S. Trade Shock Observatory, a portfolio
+project examining how U.S. imports of Canadian core-steel products changed
+around the 2025 Section 232 tariff increases.
 
-Using official U.S. Census trade data, I created a reproducible Python pipeline
-covering 2024 and 2025. The project includes product-code harmonization,
-immutable source records, transition-month treatment, automated validation,
-tests, charts, and a concise analytical report.
+I built a reproducible Python workflow using official U.S. Census trade data
+for 2024 and 2025. The project retrieves and validates monthly records,
+harmonizes HTS10 products to HS6, handles the March and June transition months,
+and produces documented datasets, visualizations, and a six-page analytical
+report.
 
-The main descriptive result: Canadian core-steel import value within the
-project's scope was 36.8% lower in 2025 than in 2024, while calculated duty
-reached $1.07 billion. The report does not treat this comparison as a causal
-estimate; demand, prices, seasonality, inventory timing, and product
-substitution may also have contributed.
+Three findings stood out:
 
-This project gave me the opportunity to apply data ingestion, cleaning,
-validation, analysis, visualization, and research communication to a live trade
-policy question.
+- Import value within the defined core-steel scope declined from $7.13 billion
+  in 2024 to $4.51 billion in 2025, a decrease of 36.8%.
+- Census calculated duty reached $1.07 billion in 2025.
+- The ten largest product-level contributors accounted for approximately 51%
+  of the aggregate decline.
 
-#DataAnalytics #Python #TradeData #EconomicAnalysis #DataVisualization
+These are descriptive findings, not a causal estimate of the tariff's effect.
+Demand, prices, seasonality, inventory timing, and product substitution may
+also have influenced the results.
+
+Project and report:
+https://github.com/ridoy-roy/canada-us-trade-shock-observatory
+
+#DataAnalytics #Python #TradeData #DataVisualization
