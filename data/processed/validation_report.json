@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "row_count": 12,
+  "panel_key_unique": true,
+  "all_canada": true,
+  "all_core_steel": true,
+  "transition_months": [
+    "2025-03",
+    "2025-06"
+  ],
+  "errors": [],
+  "source_mode": "api",
+  "raw_snapshots": [
+    "data/raw/census_imports_hs/2025-01/7208101500-b86d4c4e231311b3.json",
+    "data/raw/census_imports_hs/2025-02/7208101500-82bad4e99bc4e8b6.json",
+    "data/raw/census_imports_hs/2025-03/7208101500-ec4e69b15b52d990.json",
+    "data/raw/census_imports_hs/2025-04/7208101500-b2ed8f837918f732.json",
+    "data/raw/census_imports_hs/2025-05/7208101500-1aa273fc182ed61c.json",
+    "data/raw/census_imports_hs/2025-06/7208101500-dbd61f5657a6f8b0.json",
+    "data/raw/census_imports_hs/2025-07/7208101500-aa6a0b4d14501d62.json",
+    "data/raw/census_imports_hs/2025-08/7208101500-b11dc272dbf888a4.json",
+    "data/raw/census_imports_hs/2025-09/7208101500-64825587ed498314.json",
+    "data/raw/census_imports_hs/2025-10/7208101500-094607339016648f.json",
+    "data/raw/census_imports_hs/2025-11/7208101500-426a224ffc313967.json",
+    "data/raw/census_imports_hs/2025-12/7208101500-3bd952d98ae425f0.json"
+  ]
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#172033}.title{font-size:25px;font-weight:700}.sub{font-size:13px;fill:#536071}.code{font-size:14px;font-weight:700}.label{font-size:12px}.grid{stroke:#e2e8f0}.bar{fill:#2563eb}</style>
+<text x="345" y="38" class="title">Largest HS6 contributors to the 2025 import-value decline</text>
+<text x="345" y="62" class="sub">2025 value minus 2024 value; Canadian core-steel imports for consumption</text>
+<line x1="345.0" y1="93" x2="345.0" y2="625" class="grid"/>
+<text x="345.0" y="650" text-anchor="middle" class="label">$0M</text>
+<line x1="536.2" y1="93" x2="536.2" y2="625" class="grid"/>
+<text x="536.2" y="650" text-anchor="middle" class="label">$70M</text>
+<line x1="727.5" y1="93" x2="727.5" y2="625" class="grid"/>
+<text x="727.5" y="650" text-anchor="middle" class="label">$140M</text>
+<line x1="918.8" y1="93" x2="918.8" y2="625" class="grid"/>
+<text x="918.8" y="650" text-anchor="middle" class="label">$211M</text>
+<line x1="1110.0" y1="93" x2="1110.0" y2="625" class="grid"/>
+<text x="1110.0" y="650" text-anchor="middle" class="label">$281M</text>
+<text x="333" y="135.2" text-anchor="end" class="code">721049  Zinc-coated flat-rolled steel</text>
+<rect x="345" y="114.4" width="765.0" height="27.0" rx="3" class="bar"/>
+<text x="1118.0" y="135.2" class="label">-$280.7M</text>
+<text x="333" y="187.2" text-anchor="end" class="code">730661  Welded rectangular steel tube</text>
+<rect x="345" y="166.4" width="579.9" height="27.0" rx="3" class="bar"/>
+<text x="932.9" y="187.2" class="label">-$212.8M</text>
+<text x="333" y="239.2" text-anchor="end" class="code">720837  Hot-rolled coil, 4.75-10 mm</text>
+<rect x="345" y="218.4" width="344.4" height="27.0" rx="3" class="bar"/>
+<text x="697.4" y="239.2" class="label">-$126.4M</text>
+<text x="333" y="291.2" text-anchor="end" class="code">722530  Hot-rolled alloy-steel coil</text>
+<rect x="345" y="270.4" width="341.1" height="27.0" rx="3" class="bar"/>
+<text x="694.1" y="291.2" class="label">-$125.2M</text>
+<text x="333" y="343.2" text-anchor="end" class="code">720838  Hot-rolled coil, 3-4.75 mm</text>
+<rect x="345" y="322.4" width="313.3" height="27.0" rx="3" class="bar"/>
+<text x="666.3" y="343.2" class="label">-$115.0M</text>
+<text x="333" y="395.2" text-anchor="end" class="code">720917  Cold-rolled coil, 0.5-1 mm</text>
+<rect x="345" y="374.4" width="271.4" height="27.0" rx="3" class="bar"/>
+<text x="624.4" y="395.2" class="label">-$99.6M</text>
+<text x="333" y="447.2" text-anchor="end" class="code">721391  Hot-rolled bars/rods, under 14 mm</text>
+<rect x="345" y="426.4" width="270.6" height="27.0" rx="3" class="bar"/>
+<text x="623.6" y="447.2" class="label">-$99.3M</text>
+<text x="333" y="499.2" text-anchor="end" class="code">720839  Hot-rolled coil, under 3 mm</text>
+<rect x="345" y="478.4" width="261.9" height="27.0" rx="3" class="bar"/>
+<text x="614.9" y="499.2" class="label">-$96.1M</text>
+<text x="333" y="551.2" text-anchor="end" class="code">720916  Cold-rolled coil, 1-3 mm</text>
+<rect x="345" y="530.4" width="259.1" height="27.0" rx="3" class="bar"/>
+<text x="612.1" y="551.2" class="label">-$95.1M</text>
+<text x="333" y="603.2" text-anchor="end" class="code">720712  Semifinished rectangular steel</text>
+<rect x="345" y="582.4" width="247.3" height="27.0" rx="3" class="bar"/>
+<text x="600.3" y="603.2" class="label">-$90.8M</text>
+<text x="345" y="676" class="sub">Bars show absolute contribution to the aggregate decline; they do not represent causal effects.</text>
+</svg>

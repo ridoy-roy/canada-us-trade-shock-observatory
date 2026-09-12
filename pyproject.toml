@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canada-us-trade-shock"
+version = "0.1.0"
+description = "Reproducible analysis of the 2025 Section 232 core-steel trade shock"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+analysis = ["jupyter>=1.0", "matplotlib>=3.8", "pandas>=2.1"]
+
+[project.scripts]
+build-trade-panel = "trade_shock.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

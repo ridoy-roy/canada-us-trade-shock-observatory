@@ -1,0 +1,5 @@
+effective_at_et,rate,country_code,scope,event,source
+2019-05-20T00:00:00,0.00,1220,section232_core_steel,"Canada exemption restored","https://www.govinfo.gov/content/pkg/FR-2019-05-23/pdf/2019-10985.pdf"
+2025-03-12T00:00:00,0.25,1220,section232_core_steel,"Canada exemption terminated","https://www.whitehouse.gov/presidential-actions/2025/02/adjusting-imports-of-steel-into-the-united-states/"
+2025-06-04T00:00:00,0.50,1220,section232_core_steel,"Section 232 rate increased","https://www.whitehouse.gov/presidential-actions/2025/06/adjusting-imports-of-aluminum-and-steel-into-the-united-states/"
+

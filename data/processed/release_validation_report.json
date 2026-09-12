@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "errors": [],
+  "panel_rows": 3694,
+  "months": 24,
+  "hs6_codes": 164,
+  "country_code": "1220",
+  "scope": "section232_core_steel",
+  "transition_months": [
+    "2025-03",
+    "2025-06"
+  ],
+  "hs6_quantity_available": false,
+  "raw_snapshot_count": 96,
+  "product_universe_hts10_count": 746,
+  "product_universe_hs6_count": 168
+}

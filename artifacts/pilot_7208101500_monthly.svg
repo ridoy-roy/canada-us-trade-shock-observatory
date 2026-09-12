@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#172033}.title{font-size:24px;font-weight:700}.sub{font-size:13px;fill:#536071}.label{font-size:12px}.axis{stroke:#cbd5e1;stroke-width:1}.transition{fill:#f59e0b;opacity:.12}</style>
+<text x="105" y="32" class="title">Canada → U.S. monthly trade: HTS 7208101500</text>
+<text x="105" y="52" class="sub">FLAT-ROLLED IRON OR NONALLOY STEEL COILS, 600 MM OR MORE WIDE, HOT-ROLLED, NOT CLAD, PLATED OR COATED, PICKLED, WITH PATTERNS IN RELIEF</text>
+<text x="105" y="58" class="label" font-weight="700">Imports for consumption (USD)</text>
+<line x1="105" y1="235.0" x2="1070" y2="235.0" class="axis"/>
+<text x="95" y="239.0" text-anchor="end" class="label">0</text>
+<line x1="105" y1="152.5" x2="1070" y2="152.5" class="axis"/>
+<text x="95" y="156.5" text-anchor="end" class="label">55,782</text>
+<line x1="105" y1="70.0" x2="1070" y2="70.0" class="axis"/>
+<text x="95" y="74.0" text-anchor="end" class="label">111,565</text>
+<rect x="240.2" y="70" width="80.4" height="165" class="transition"/>
+<rect x="503.4" y="70" width="80.4" height="165" class="transition"/>
+<polyline points="105.0,70.0 192.7,100.1 280.5,166.5 368.2,235.0 455.9,214.7 543.6,191.1 631.4,235.0 719.1,235.0 806.8,235.0 894.5,220.2 982.3,205.0 1070.0,235.0" fill="none" stroke="#2563eb" stroke-width="3"/>
+<circle cx="105.0" cy="70.0" r="4" fill="#2563eb"/>
+<circle cx="192.7" cy="100.1" r="4" fill="#2563eb"/>
+<circle cx="280.5" cy="166.5" r="4" fill="#2563eb"/>
+<circle cx="368.2" cy="235.0" r="4" fill="#2563eb"/>
+<circle cx="455.9" cy="214.7" r="4" fill="#2563eb"/>
+<circle cx="543.6" cy="191.1" r="4" fill="#2563eb"/>
+<circle cx="631.4" cy="235.0" r="4" fill="#2563eb"/>
+<circle cx="719.1" cy="235.0" r="4" fill="#2563eb"/>
+<circle cx="806.8" cy="235.0" r="4" fill="#2563eb"/>
+<circle cx="894.5" cy="220.2" r="4" fill="#2563eb"/>
+<circle cx="982.3" cy="205.0" r="4" fill="#2563eb"/>
+<circle cx="1070.0" cy="235.0" r="4" fill="#2563eb"/>
+<text x="105" y="278" class="label" font-weight="700">Quantity (KG)</text>
+<line x1="105" y1="455.0" x2="1070" y2="455.0" class="axis"/>
+<text x="95" y="459.0" text-anchor="end" class="label">0</text>
+<line x1="105" y1="372.5" x2="1070" y2="372.5" class="axis"/>
+<text x="95" y="376.5" text-anchor="end" class="label">81,733</text>
+<line x1="105" y1="290.0" x2="1070" y2="290.0" class="axis"/>
+<text x="95" y="294.0" text-anchor="end" class="label">163,466</text>
+<rect x="240.2" y="290" width="80.4" height="165" class="transition"/>
+<rect x="503.4" y="290" width="80.4" height="165" class="transition"/>
+<polyline points="105.0,296.9 192.7,290.0 280.5,365.3 368.2,455.0 455.9,434.9 543.6,400.2 631.4,455.0 719.1,455.0 806.8,455.0 894.5,437.4 982.3,398.4 1070.0,455.0" fill="none" stroke="#059669" stroke-width="3"/>
+<circle cx="105.0" cy="296.9" r="4" fill="#059669"/>
+<circle cx="192.7" cy="290.0" r="4" fill="#059669"/>
+<circle cx="280.5" cy="365.3" r="4" fill="#059669"/>
+<circle cx="368.2" cy="455.0" r="4" fill="#059669"/>
+<circle cx="455.9" cy="434.9" r="4" fill="#059669"/>
+<circle cx="543.6" cy="400.2" r="4" fill="#059669"/>
+<circle cx="631.4" cy="455.0" r="4" fill="#059669"/>
+<circle cx="719.1" cy="455.0" r="4" fill="#059669"/>
+<circle cx="806.8" cy="455.0" r="4" fill="#059669"/>
+<circle cx="894.5" cy="437.4" r="4" fill="#059669"/>
+<circle cx="982.3" cy="398.4" r="4" fill="#059669"/>
+<circle cx="1070.0" cy="455.0" r="4" fill="#059669"/>
+<text x="105" y="498" class="label" font-weight="700">Calculated duty (USD)</text>
+<line x1="105" y1="675.0" x2="1070" y2="675.0" class="axis"/>
+<text x="95" y="679.0" text-anchor="end" class="label">0</text>
+<line x1="105" y1="592.5" x2="1070" y2="592.5" class="axis"/>
+<text x="95" y="596.5" text-anchor="end" class="label">5,067</text>
+<line x1="105" y1="510.0" x2="1070" y2="510.0" class="axis"/>
+<text x="95" y="514.0" text-anchor="end" class="label">10,134</text>
+<rect x="240.2" y="510" width="80.4" height="165" class="transition"/>
+<rect x="503.4" y="510" width="80.4" height="165" class="transition"/>
+<polyline points="105.0,675.0 192.7,675.0 280.5,675.0 368.2,675.0 455.9,619.1 543.6,554.2 631.4,675.0 719.1,675.0 806.8,675.0 894.5,675.0 982.3,510.0 1070.0,675.0" fill="none" stroke="#dc2626" stroke-width="3"/>
+<circle cx="105.0" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="192.7" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="280.5" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="368.2" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="455.9" cy="619.1" r="4" fill="#dc2626"/>
+<circle cx="543.6" cy="554.2" r="4" fill="#dc2626"/>
+<circle cx="631.4" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="719.1" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="806.8" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="894.5" cy="675.0" r="4" fill="#dc2626"/>
+<circle cx="982.3" cy="510.0" r="4" fill="#dc2626"/>
+<circle cx="1070.0" cy="675.0" r="4" fill="#dc2626"/>
+<text x="105.0" y="697" text-anchor="middle" class="label">01</text>
+<text x="192.7" y="697" text-anchor="middle" class="label">02</text>
+<text x="280.5" y="697" text-anchor="middle" class="label">03</text>
+<text x="368.2" y="697" text-anchor="middle" class="label">04</text>
+<text x="455.9" y="697" text-anchor="middle" class="label">05</text>
+<text x="543.6" y="697" text-anchor="middle" class="label">06</text>
+<text x="631.4" y="697" text-anchor="middle" class="label">07</text>
+<text x="719.1" y="697" text-anchor="middle" class="label">08</text>
+<text x="806.8" y="697" text-anchor="middle" class="label">09</text>
+<text x="894.5" y="697" text-anchor="middle" class="label">10</text>
+<text x="982.3" y="697" text-anchor="middle" class="label">11</text>
+<text x="1070.0" y="697" text-anchor="middle" class="label">12</text>
+<rect x="105" y="718" width="14" height="14" class="transition"/>
+<text x="127" y="730" class="sub">Shaded: within-month tariff change (excluded from clean full-month comparisons)</text>
+</svg>

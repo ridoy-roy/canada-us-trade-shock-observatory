@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+/tmp/
+/sources/
+/AGENTS.md
+data/raw/census_imports_hs/**
+!data/raw/census_imports_hs/.gitkeep
+data/raw/usitc_hts/**
+!data/raw/usitc_hts/.gitkeep
