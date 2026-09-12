@@ -137,9 +137,7 @@ def write_release_report(
     ]
     report = f"""# Canada-U.S. Trade Shock Observatory: Initial Analytical Release
 
-**Ridoy Roy | Data Analyst**
-
-**Independent Portfolio Project**
+**Ridoy Roy**
 
 ## Release status
 
