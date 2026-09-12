@@ -142,13 +142,13 @@ def on_page(canvas, doc):
     canvas.setSubject("Canadian core-steel imports and the 2025 Section 232 tariff changes")
     canvas.setKeywords("Canada, United States, steel, Section 232, trade, tariffs")
     if doc.page == 1:
-        canvas.setFillColor(INK)
+        canvas.setFillColor(colors.HexColor("#F6F7F5"))
         canvas.rect(0, 0, letter[0], letter[1], fill=1, stroke=0)
         canvas.setFillColor(BLUE)
         canvas.rect(0, 0, 0.18 * inch, letter[1], fill=1, stroke=0)
-        canvas.setFillColor(colors.HexColor("#263B4A"))
+        canvas.setFillColor(colors.HexColor("#DDE6E8"))
         canvas.circle(7.9 * inch, 10.3 * inch, 1.35 * inch, fill=1, stroke=0)
-        canvas.setFillColor(colors.HexColor("#1D303E"))
+        canvas.setFillColor(colors.HexColor("#E9EEEC"))
         canvas.circle(7.25 * inch, 9.85 * inch, 0.7 * inch, fill=1, stroke=0)
     else:
         canvas.setFillColor(BLUE)
@@ -159,10 +159,10 @@ def on_page(canvas, doc):
         canvas.setFillColor(SLATE)
         canvas.drawString(0.65 * inch, 10.47 * inch, "CANADA-U.S. TRADE SHOCK OBSERVATORY")
         canvas.drawRightString(7.85 * inch, 10.47 * inch, "INITIAL ANALYTICAL RELEASE")
-    canvas.setStrokeColor(colors.HexColor("#415363") if doc.page == 1 else GRID)
+    canvas.setStrokeColor(GRID)
     canvas.line(0.65 * inch, 0.55 * inch, 7.85 * inch, 0.55 * inch)
     canvas.setFont("Helvetica", 7)
-    canvas.setFillColor(colors.HexColor("#A9B5BE") if doc.page == 1 else SLATE)
+    canvas.setFillColor(SLATE)
     canvas.drawString(0.65 * inch, 0.38 * inch, "Ridoy Roy | Official U.S. Census trade data")
     canvas.drawRightString(7.85 * inch, 0.38 * inch, f"Page {doc.page}")
     canvas.restoreState()
@@ -178,15 +178,15 @@ def build() -> Path:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name="CoverEyebrow", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=8.5, leading=11, tracking=1.6, textColor=colors.HexColor("#91B3C2"), spaceAfter=16))
-    styles.add(ParagraphStyle(name="CoverTitle", parent=styles["Title"], fontName="Helvetica-Bold", fontSize=33, leading=37, textColor=WHITE, alignment=TA_LEFT, spaceAfter=18))
-    styles.add(ParagraphStyle(name="CoverSub", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=16, leading=21, textColor=WHITE, spaceAfter=12))
-    styles.add(ParagraphStyle(name="CoverDeck", parent=styles["Normal"], fontSize=10.5, leading=15.5, textColor=colors.HexColor("#C9D1D6"), spaceAfter=12))
-    styles.add(ParagraphStyle(name="CoverAuthor", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=10.5, leading=14, textColor=colors.HexColor("#91B3C2"), spaceAfter=6))
-    styles.add(ParagraphStyle(name="CoverLabel", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=7.2, leading=9, textColor=colors.HexColor("#ADB8BE"), spaceAfter=2))
+    styles.add(ParagraphStyle(name="CoverEyebrow", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=8.5, leading=11, tracking=1.6, textColor=BLUE, spaceAfter=16))
+    styles.add(ParagraphStyle(name="CoverTitle", parent=styles["Title"], fontName="Helvetica-Bold", fontSize=33, leading=37, textColor=INK, alignment=TA_LEFT, spaceAfter=18))
+    styles.add(ParagraphStyle(name="CoverSub", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=16, leading=21, textColor=NAVY, spaceAfter=12))
+    styles.add(ParagraphStyle(name="CoverDeck", parent=styles["Normal"], fontSize=10.5, leading=15.5, textColor=SLATE, spaceAfter=12))
+    styles.add(ParagraphStyle(name="CoverAuthor", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=10.5, leading=14, textColor=BLUE, spaceAfter=6))
+    styles.add(ParagraphStyle(name="CoverLabel", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=7.2, leading=9, textColor=SLATE, spaceAfter=2))
     styles.add(ParagraphStyle(name="CardLabel", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=7.5, leading=9.5, textColor=NAVY, spaceAfter=2))
-    styles.add(ParagraphStyle(name="CoverValue", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=20, leading=23, textColor=WHITE))
-    styles.add(ParagraphStyle(name="CoverCallout", parent=styles["BodyText"], fontName="Helvetica-Bold", fontSize=10.5, leading=15, textColor=WHITE, borderPadding=11, backColor=BLUE, spaceBefore=4, spaceAfter=10))
+    styles.add(ParagraphStyle(name="CoverValue", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=20, leading=23, textColor=NAVY))
+    styles.add(ParagraphStyle(name="CoverCallout", parent=styles["BodyText"], fontName="Helvetica-Bold", fontSize=10.5, leading=15, textColor=NAVY, borderPadding=11, backColor=colors.HexColor("#E4EBED"), spaceBefore=4, spaceAfter=10))
     styles.add(ParagraphStyle(name="H1x", parent=styles["Heading1"], fontName="Helvetica-Bold", fontSize=20, leading=24, textColor=NAVY, spaceBefore=5, spaceAfter=9))
     styles.add(ParagraphStyle(name="H2x", parent=styles["Heading2"], fontName="Helvetica-Bold", fontSize=12.5, leading=15, textColor=BLUE, spaceBefore=10, spaceAfter=6))
     styles.add(ParagraphStyle(name="Bodyx", parent=styles["BodyText"], fontSize=9.3, leading=13.4, textColor=colors.HexColor("#27344D"), spaceAfter=7))
@@ -215,7 +215,7 @@ def build() -> Path:
         [Paragraph(usd(annual_2025["value"]), styles["CoverValue"]), Paragraph(f"{annual_2025['value'] / annual_2024['value'] - 1:+.1%}", styles["CoverValue"]), Paragraph(usd(annual_2025["duty"]), styles["CoverValue"])],
     ]
     card_table = Table(cards, colWidths=[2.35 * inch] * 3, rowHeights=[0.32 * inch, 0.58 * inch])
-    card_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#1B2A38")), ("LINEABOVE", (0, 0), (-1, 0), 2.5, BLUE), ("INNERGRID", (0, 0), (-1, -1), 0.7, colors.HexColor("#344553")), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LEFTPADDING", (0, 0), (-1, -1), 11), ("RIGHTPADDING", (0, 0), (-1, -1), 9)]))
+    card_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), WHITE), ("LINEABOVE", (0, 0), (-1, 0), 2.5, BLUE), ("BOX", (0, 0), (-1, -1), 0.5, GRID), ("INNERGRID", (0, 0), (-1, -1), 0.5, GRID), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LEFTPADDING", (0, 0), (-1, -1), 11), ("RIGHTPADDING", (0, 0), (-1, -1), 9)]))
     story += [card_table, Spacer(1, 18), Paragraph("The value of Canadian core-steel imports in scope was 36.8% lower in 2025 than in 2024. Declines were larger in later policy windows, although this comparison alone does not establish causality.", styles["CoverCallout"]), Spacer(1, 4), Paragraph(f"RELEASED {date.today().strftime('%B %Y').upper()}   /   VALIDATION {validation['status'].upper()}   /   {validation['raw_snapshot_count']} ARCHIVED API RESPONSES", styles["CoverLabel"]), PageBreak()]
 
     # Scope and methods
