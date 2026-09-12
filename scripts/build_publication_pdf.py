@@ -161,7 +161,7 @@ def build() -> Path:
     # Cover page
     cover = Table([[Paragraph("Canada-U.S. Trade<br/>Shock Observatory", styles["CoverTitle"]), ""]], colWidths=[5.6 * inch, 1.6 * inch], rowHeights=[2.55 * inch])
     cover.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), NAVY), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LEFTPADDING", (0, 0), (0, 0), 24), ("RIGHTPADDING", (0, 0), (0, 0), 18)]))
-    story += [cover, Spacer(1, 22), Paragraph("2025 Section 232 core steel - initial analytical release", styles["H1x"]), Paragraph("Ridoy Roy | Data Analyst", styles["H2x"]), Paragraph("A reproducible account of U.S. imports for consumption from Canada, built from official Census records and matched to the 2025 tariff schedule.", styles["Bodyx"]), Spacer(1, 8)]
+    story += [cover, Spacer(1, 22), Paragraph("2025 Section 232 core steel - initial analytical release", styles["H1x"]), Paragraph("Ridoy Roy | Data Analyst", styles["H2x"]), Paragraph("Independent Portfolio Project", styles["Smallx"]), Paragraph("A reproducible account of U.S. imports for consumption from Canada, built from official Census records and matched to the 2025 tariff schedule.", styles["Bodyx"]), Spacer(1, 8)]
     annual_2024, annual_2025 = annual["2024"], annual["2025"]
     cards = [
         [Paragraph("2025 IMPORT VALUE", styles["Smallx"]), Paragraph("ANNUAL CHANGE", styles["Smallx"]), Paragraph("2025 CALCULATED DUTY", styles["Smallx"])],

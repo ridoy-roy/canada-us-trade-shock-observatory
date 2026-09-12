@@ -2,6 +2,8 @@
 
 **Ridoy Roy | Data Analyst**
 
+**Independent Portfolio Project**
+
 ## Release status
 
 - Validation: **passed**

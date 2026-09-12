@@ -139,6 +139,8 @@ def write_release_report(
 
 **Ridoy Roy | Data Analyst**
 
+**Independent Portfolio Project**
+
 ## Release status
 
 - Validation: **{validation['status']}**

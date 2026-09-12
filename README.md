@@ -1,6 +1,10 @@
 # Canada-U.S. Trade Shock Observatory: Initial Release
 
+[![Tests](https://github.com/ridoy-roy/canada-us-trade-shock-observatory/actions/workflows/tests.yml/badge.svg)](https://github.com/ridoy-roy/canada-us-trade-shock-observatory/actions/workflows/tests.yml)
+
 **Ridoy Roy | Data Analyst**
+
+**Independent Portfolio Project**
 
 Reproducible, audit-oriented release for the 2025 U.S. Section 232 shock to
 Canadian **core steel** imports. The pipeline ingests monthly U.S. imports for consumption
@@ -10,7 +14,8 @@ charts, and a report. It does not contain a dashboard.
 
 ## Published release
 
-- [Read the five-page analytical report](output/pdf/canada_us_trade_shock_observatory_v0.pdf)
+- **[Read the six-page analytical report](output/pdf/canada_us_trade_shock_observatory_v0.pdf)**
+- [Explore the portfolio notebook](notebooks/initial_release_walkthrough.ipynb)
 - [Read the detailed Markdown report](reports/v0_release_report.md)
 - [Open the validated monthly summary](data/processed/core_steel_monthly_summary.csv)
 - [Review the release validation results](data/processed/release_validation_report.json)
