@@ -26,19 +26,19 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "pdf" / "canada_us_trade_shock_observatory_v0.pdf"
-NAVY = colors.HexColor("#101C3D")
-BLUE = colors.HexColor("#1769E0")
-GREEN = colors.HexColor("#078C73")
-RED = colors.HexColor("#D9485F")
-PURPLE = colors.HexColor("#7457E8")
-AMBER = colors.HexColor("#F5A524")
-SLATE = colors.HexColor("#526079")
-MUTED = colors.HexColor("#76839A")
-LIGHT = colors.HexColor("#F3F6FA")
-PALE_BLUE = colors.HexColor("#EAF2FF")
-GRID = colors.HexColor("#D6DEEA")
+NAVY = colors.HexColor("#1C2B3A")
+BLUE = colors.HexColor("#35627A")
+GREEN = colors.HexColor("#3E7569")
+RED = colors.HexColor("#A95656")
+PURPLE = colors.HexColor("#756A8A")
+AMBER = colors.HexColor("#B8894C")
+SLATE = colors.HexColor("#566372")
+MUTED = colors.HexColor("#7B8794")
+LIGHT = colors.HexColor("#F3F4F4")
+PALE_BLUE = colors.HexColor("#E8EEF1")
+GRID = colors.HexColor("#D7DCDE")
 WHITE = colors.white
-INK = colors.HexColor("#0A1228")
+INK = colors.HexColor("#111D29")
 
 
 def load_csv(path: Path) -> list[dict[str, str]]:
@@ -99,7 +99,7 @@ def panel_chart(
         for i, row in enumerate(rows):
             if row.get("is_transition_month") == "True":
                 span = plot_width / max(len(rows) - 1, 1)
-                drawing.add(Rect(xs[i] - span / 2, panel_bottom, span, panel_height, fillColor=colors.Color(1, .62, .04, alpha=.13), strokeColor=None))
+                drawing.add(Rect(xs[i] - span / 2, panel_bottom, span, panel_height, fillColor=colors.Color(.72, .56, .33, alpha=.14), strokeColor=None))
         points = [(xs[i], panel_bottom + panel_height * value / maximum) for i, value in enumerate(values)]
         for first, second in zip(points, points[1:]):
             drawing.add(Line(first[0], first[1], second[0], second[1], strokeColor=color, strokeWidth=1.8))
@@ -146,9 +146,9 @@ def on_page(canvas, doc):
         canvas.rect(0, 0, letter[0], letter[1], fill=1, stroke=0)
         canvas.setFillColor(BLUE)
         canvas.rect(0, 0, 0.18 * inch, letter[1], fill=1, stroke=0)
-        canvas.setFillColor(colors.HexColor("#203158"))
+        canvas.setFillColor(colors.HexColor("#263B4A"))
         canvas.circle(7.9 * inch, 10.3 * inch, 1.35 * inch, fill=1, stroke=0)
-        canvas.setFillColor(colors.HexColor("#182746"))
+        canvas.setFillColor(colors.HexColor("#1D303E"))
         canvas.circle(7.25 * inch, 9.85 * inch, 0.7 * inch, fill=1, stroke=0)
     else:
         canvas.setFillColor(BLUE)
@@ -159,10 +159,10 @@ def on_page(canvas, doc):
         canvas.setFillColor(SLATE)
         canvas.drawString(0.65 * inch, 10.47 * inch, "CANADA-U.S. TRADE SHOCK OBSERVATORY")
         canvas.drawRightString(7.85 * inch, 10.47 * inch, "INITIAL ANALYTICAL RELEASE")
-    canvas.setStrokeColor(colors.HexColor("#31415F") if doc.page == 1 else GRID)
+    canvas.setStrokeColor(colors.HexColor("#415363") if doc.page == 1 else GRID)
     canvas.line(0.65 * inch, 0.55 * inch, 7.85 * inch, 0.55 * inch)
     canvas.setFont("Helvetica", 7)
-    canvas.setFillColor(colors.HexColor("#AAB6CC") if doc.page == 1 else SLATE)
+    canvas.setFillColor(colors.HexColor("#A9B5BE") if doc.page == 1 else SLATE)
     canvas.drawString(0.65 * inch, 0.38 * inch, "Ridoy Roy | Official U.S. Census trade data")
     canvas.drawRightString(7.85 * inch, 0.38 * inch, f"Page {doc.page}")
     canvas.restoreState()
@@ -178,12 +178,12 @@ def build() -> Path:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name="CoverEyebrow", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=8.5, leading=11, tracking=1.6, textColor=colors.HexColor("#7FB0FF"), spaceAfter=16))
+    styles.add(ParagraphStyle(name="CoverEyebrow", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=8.5, leading=11, tracking=1.6, textColor=colors.HexColor("#91B3C2"), spaceAfter=16))
     styles.add(ParagraphStyle(name="CoverTitle", parent=styles["Title"], fontName="Helvetica-Bold", fontSize=33, leading=37, textColor=WHITE, alignment=TA_LEFT, spaceAfter=18))
     styles.add(ParagraphStyle(name="CoverSub", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=16, leading=21, textColor=WHITE, spaceAfter=12))
-    styles.add(ParagraphStyle(name="CoverDeck", parent=styles["Normal"], fontSize=10.5, leading=15.5, textColor=colors.HexColor("#CAD5E7"), spaceAfter=12))
-    styles.add(ParagraphStyle(name="CoverAuthor", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=10.5, leading=14, textColor=colors.HexColor("#7FB0FF"), spaceAfter=6))
-    styles.add(ParagraphStyle(name="CoverLabel", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=7.2, leading=9, textColor=colors.HexColor("#A9B8D0"), spaceAfter=2))
+    styles.add(ParagraphStyle(name="CoverDeck", parent=styles["Normal"], fontSize=10.5, leading=15.5, textColor=colors.HexColor("#C9D1D6"), spaceAfter=12))
+    styles.add(ParagraphStyle(name="CoverAuthor", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=10.5, leading=14, textColor=colors.HexColor("#91B3C2"), spaceAfter=6))
+    styles.add(ParagraphStyle(name="CoverLabel", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=7.2, leading=9, textColor=colors.HexColor("#ADB8BE"), spaceAfter=2))
     styles.add(ParagraphStyle(name="CardLabel", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=7.5, leading=9.5, textColor=NAVY, spaceAfter=2))
     styles.add(ParagraphStyle(name="CoverValue", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=20, leading=23, textColor=WHITE))
     styles.add(ParagraphStyle(name="CoverCallout", parent=styles["BodyText"], fontName="Helvetica-Bold", fontSize=10.5, leading=15, textColor=WHITE, borderPadding=11, backColor=BLUE, spaceBefore=4, spaceAfter=10))
@@ -215,7 +215,7 @@ def build() -> Path:
         [Paragraph(usd(annual_2025["value"]), styles["CoverValue"]), Paragraph(f"{annual_2025['value'] / annual_2024['value'] - 1:+.1%}", styles["CoverValue"]), Paragraph(usd(annual_2025["duty"]), styles["CoverValue"])],
     ]
     card_table = Table(cards, colWidths=[2.35 * inch] * 3, rowHeights=[0.32 * inch, 0.58 * inch])
-    card_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#172647")), ("LINEABOVE", (0, 0), (-1, 0), 2.5, BLUE), ("INNERGRID", (0, 0), (-1, -1), 0.7, colors.HexColor("#334463")), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LEFTPADDING", (0, 0), (-1, -1), 11), ("RIGHTPADDING", (0, 0), (-1, -1), 9)]))
+    card_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#1B2A38")), ("LINEABOVE", (0, 0), (-1, 0), 2.5, BLUE), ("INNERGRID", (0, 0), (-1, -1), 0.7, colors.HexColor("#344553")), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LEFTPADDING", (0, 0), (-1, -1), 11), ("RIGHTPADDING", (0, 0), (-1, -1), 9)]))
     story += [card_table, Spacer(1, 18), Paragraph("The value of Canadian core-steel imports in scope was 36.8% lower in 2025 than in 2024. Declines were larger in later policy windows, although this comparison alone does not establish causality.", styles["CoverCallout"]), Spacer(1, 4), Paragraph(f"RELEASED {date.today().strftime('%B %Y').upper()}   /   VALIDATION {validation['status'].upper()}   /   {validation['raw_snapshot_count']} ARCHIVED API RESPONSES", styles["CoverLabel"]), PageBreak()]
 
     # Scope and methods
@@ -243,7 +243,7 @@ def build() -> Path:
     # Results
     story += [Paragraph("2. Full core-steel results", styles["H1x"]), Paragraph("Import value generally declined during 2025, while reported calculated duty increased after the March and June policy changes. The duty-to-value series divides Census calculated duty by total import value.", styles["Bodyx"])]
     story.append(panel_chart(monthly, [("import_value_usd", "Imports for consumption (USD)", BLUE, 1), ("observed_effective_duty_rate_pct", "Observed duty / value (%)", PURPLE, 1), ("calculated_duty_usd", "Calculated duty (USD)", RED, 1)], width=510, panel_height=82))
-    story += [Spacer(1, 4), Paragraph("Orange shading marks March and June 2025 transition months.", styles["Smallx"])]
+    story += [Spacer(1, 4), Paragraph("Source: U.S. Census Bureau International Trade API; author's calculations. Note: Warm shading marks March and June 2025 transition months.", styles["Smallx"])]
     regime = [
         ["2025 clean window", "Import value", "vs. same 2024 months", "Duty / value"],
         ["Pre-tariff: Jan.-Feb.", "$1.132B", "-16.2%", "0.0%"],
@@ -266,7 +266,7 @@ def build() -> Path:
         ])
     dt = Table(driver_table, colWidths=[0.4 * inch, 0.55 * inch, 2.05 * inch, 1.0 * inch, 1.0 * inch, 1.0 * inch, 0.6 * inch], repeatRows=1)
     dt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white), ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"), ("GRID", (0, 0), (-1, -1), 0.3, GRID), ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]), ("FONTSIZE", (0, 0), (-1, -1), 6.7), ("ALIGN", (0, 1), (1, -1), "CENTER"), ("ALIGN", (3, 1), (-1, -1), "RIGHT"), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("TOPPADDING", (0, 0), (-1, -1), 2.5), ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5)]))
-    story += [Spacer(1, 3), dt, Spacer(1, 5), Paragraph("This is an accounting decomposition of the observed value change, not a causal estimate of product-level tariff effects.", styles["Smallx"]), PageBreak()]
+    story += [Spacer(1, 3), dt, Spacer(1, 5), Paragraph("Source: U.S. Census Bureau International Trade API; author's calculations. Note: This is an accounting decomposition of the observed value change, not a causal estimate of product-level tariff effects.", styles["Smallx"]), PageBreak()]
 
     # Pilot
     story += [Paragraph("4. HTS10 pilot: 7208101500", styles["H1x"]), Paragraph("Flat-rolled iron or nonalloy steel coils, 600 mm or more wide, hot-rolled, pickled, with patterns in relief. Unlike the HS6 aggregate release, this line reports quantity in kilograms.", styles["Bodyx"])]
@@ -303,7 +303,7 @@ def build() -> Path:
         [Paragraph("WHAT THE EVIDENCE SHOWS", styles["CardLabel"]), Paragraph("WHAT IT DOES NOT CLAIM", styles["CardLabel"])],
         [Paragraph("Observed import values, calculated duty, policy timing, and the products contributing most to the annual decline.", styles["Bodyx"]), Paragraph("A causal tariff effect, welfare impact, tariff pass-through, domestic output, employment effects, or trade diversion.", styles["Bodyx"])],
     ], colWidths=[3.45 * inch, 3.45 * inch])
-    interpretation_cards.setStyle(TableStyle([("BACKGROUND", (0, 0), (0, -1), PALE_BLUE), ("BACKGROUND", (1, 0), (1, -1), colors.HexColor("#FFF4E5")), ("TEXTCOLOR", (0, 0), (0, 0), BLUE), ("TEXTCOLOR", (1, 0), (1, 0), colors.HexColor("#A75D00")), ("BOX", (0, 0), (0, -1), 0.5, colors.HexColor("#B9D2FA")), ("BOX", (1, 0), (1, -1), 0.5, colors.HexColor("#F2D39C")), ("VALIGN", (0, 0), (-1, -1), "TOP"), ("LEFTPADDING", (0, 0), (-1, -1), 10), ("RIGHTPADDING", (0, 0), (-1, -1), 10), ("TOPPADDING", (0, 0), (-1, -1), 8), ("BOTTOMPADDING", (0, 0), (-1, -1), 8)]))
+    interpretation_cards.setStyle(TableStyle([("BACKGROUND", (0, 0), (0, -1), PALE_BLUE), ("BACKGROUND", (1, 0), (1, -1), colors.HexColor("#F4EEE4")), ("TEXTCOLOR", (0, 0), (0, 0), BLUE), ("TEXTCOLOR", (1, 0), (1, 0), colors.HexColor("#80633C")), ("BOX", (0, 0), (0, -1), 0.5, colors.HexColor("#BCCDD5")), ("BOX", (1, 0), (1, -1), 0.5, colors.HexColor("#DCC8AA")), ("VALIGN", (0, 0), (-1, -1), "TOP"), ("LEFTPADDING", (0, 0), (-1, -1), 10), ("RIGHTPADDING", (0, 0), (-1, -1), 10), ("TOPPADDING", (0, 0), (-1, -1), 8), ("BOTTOMPADDING", (0, 0), (-1, -1), 8)]))
     story += [qt, Spacer(1, 10), interpretation_cards, Paragraph("Reproduction", styles["H2x"]), Paragraph("Run <font name='Courier'>python scripts/build_release.py --reuse-snapshots</font> to rebuild the processed files from archived source responses. Run <font name='Courier'>python -m unittest discover -s tests -v</font> to repeat the validation tests.", styles["Bodyx"]), Paragraph("Official sources", styles["H2x"])]
     sources = [
         ("U.S. Census International Trade API", "https://api.census.gov/data/timeseries/intltrade/imports/hs.html"),
@@ -313,7 +313,7 @@ def build() -> Path:
         ("June 2025 steel and aluminum proclamation", "https://www.whitehouse.gov/presidential-actions/2025/06/adjusting-imports-of-aluminum-and-steel-into-the-united-states/"),
     ]
     for label, url in sources:
-        story.append(Paragraph(f"- <link href='{url}' color='#2563EB'>{label}</link>", styles["Smallx"]))
+        story.append(Paragraph(f"- <link href='{url}' color='#35627A'>{label}</link>", styles["Smallx"]))
     story += [Spacer(1, 8), Paragraph("Publication note", styles["H2x"]), Paragraph("Recommended citation: Roy, Ridoy. 2026. <i>Canada-U.S. Trade Shock Observatory: 2025 Section 232 Core Steel, Initial Analytical Release.</i> Data derived from the U.S. Census Bureau and official presidential proclamations.", styles["Bodyx"])]
 
     doc.build(story)
