@@ -84,10 +84,17 @@ divided by imports for consumption. It is not expected to equal the headline
 Section 232 rate because entry treatment, timing, exclusions, programs, and
 ordinary duties can differ.
 
+The $0 calculated-duty total in the 2024 core-steel panel is the value reported
+by Census for these Canada-origin total rows, not a value inferred by the code.
+Canada remained exempt from the additional Section 232 steel tariff throughout
+2024. At the individual HTS10 level, a zero can also mean that no imports were
+reported in that month or that a reported entry carried no calculated duty.
+
 ## Data quality
 
 The release contains **3,694 HS6-month observations** across 24 months and
-passes **18 automated tests**. Validation checks cover:
+passes **23 automated tests**, including a complete offline release build.
+Validation checks cover:
 
 - missing months and duplicate panel keys;
 - malformed Census responses and negative measures;
@@ -101,9 +108,18 @@ excluded from Git. Credentials are supplied through environment variables and
 are never written to snapshot metadata. Aggregate HS6 quantity is reported as
 unavailable rather than incorrectly recorded as zero.
 
-## Reproducing the analysis
+The committed [release manifest](data/processed/release_manifest.json) records
+the exact SHA-256 hash of all **108 source snapshots** (96 full-scope and 12
+pilot responses), every configuration file, and every core release output.
+This makes the published results auditable without publishing raw API responses
+or credentials.
 
-The core pipeline uses Python 3.11+ and the standard library.
+## Reproducing and verifying the analysis
+
+The core pipeline uses Python 3.11+ and the standard library. From a fresh
+clone, the following performs a new official-data build. It downloads the
+official 2025 commodity concordance automatically and retrieves current Census
+responses, which may include revisions made after this release.
 
     python -m venv .venv
     .venv\Scripts\Activate.ps1
@@ -117,6 +133,21 @@ Request a key from the
 Notebook dependencies can be installed with:
 
     python -m pip install -e ".[analysis]"
+
+Anyone can verify that the committed datasets, charts, report source, and
+configuration still match the published release manifest:
+
+    python scripts/verify_release.py
+
+An exact source-level rebuild uses the manifest-pinned raw archive retained by
+the author:
+
+    python scripts/build_release.py --reuse-snapshots
+    python scripts/verify_release.py --include-sources
+
+Raw Census responses are intentionally excluded from Git, so the exact rebuild
+requires that local archive. A public clone can verify the committed release or
+perform a fresh build from the official services.
 
 An offline fixture build is available for testing the ingestion contract:
 

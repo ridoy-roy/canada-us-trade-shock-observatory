@@ -9,7 +9,8 @@
     "2025-06"
   ],
   "errors": [],
-  "source_mode": "api",
+  "source_mode": "manifest_pinned_api_snapshot",
+  "raw_snapshot_count": 12,
   "raw_snapshots": [
     "data/raw/census_imports_hs/2025-01/7208101500-b86d4c4e231311b3.json",
     "data/raw/census_imports_hs/2025-02/7208101500-82bad4e99bc4e8b6.json",

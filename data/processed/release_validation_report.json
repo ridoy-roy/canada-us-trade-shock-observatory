@@ -11,7 +11,9 @@
     "2025-06"
   ],
   "hs6_quantity_available": false,
-  "raw_snapshot_count": 96,
+  "core_raw_snapshot_count": 96,
+  "pilot_raw_snapshot_count": 12,
+  "raw_snapshot_count": 108,
   "product_universe_hts10_count": 746,
   "product_universe_hs6_count": 168
 }

@@ -7,6 +7,11 @@ import json
 import zipfile
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
+
+
+CONCORDANCE_URL = "https://www.census.gov/trade/downloads/concordance/comm_month/2025/CONCCOMM2501.ZIP"
 
 
 def parse_commodity_concordance(
@@ -52,7 +57,7 @@ def parse_commodity_concordance(
 def write_concordance_metadata(archive: Path, output: Path) -> None:
     payload = archive.read_bytes()
     metadata = {
-        "source_url": "https://www.census.gov/trade/downloads/concordance/comm_month/2025/CONCCOMM2501.ZIP",
+        "source_url": CONCORDANCE_URL,
         "source_description": "January 2025 Census Commodity Concordance",
         "retrieved_at_utc": datetime.now(UTC).isoformat(),
         "sha256": hashlib.sha256(payload).hexdigest(),
@@ -60,3 +65,36 @@ def write_concordance_metadata(archive: Path, output: Path) -> None:
     }
     output.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
 
+
+def ensure_commodity_concordance(
+    raw_folder: Path,
+    opener=urlopen,
+) -> Path:
+    """Return an official concordance, downloading a content-addressed copy if needed."""
+    raw_folder.mkdir(parents=True, exist_ok=True)
+    candidates = sorted(raw_folder.glob("CONCCOMM2501*.ZIP"))
+    if candidates:
+        # Existing archives are immutable inputs. Parsing also verifies ZIP structure.
+        with zipfile.ZipFile(candidates[0]) as bundle:
+            if len(bundle.namelist()) != 1:
+                raise ValueError("commodity concordance archive must contain exactly one file")
+        return candidates[0]
+    request = Request(CONCORDANCE_URL, headers={"User-Agent": "trade-shock-v0/0.2"})
+    try:
+        with opener(request, timeout=120) as response:
+            payload = response.read()
+    except HTTPError as exc:
+        raise RuntimeError(f"Census concordance download failed with HTTP {exc.code}") from exc
+    except URLError as exc:
+        raise RuntimeError(f"Could not reach Census concordance server: {exc.reason}") from exc
+    digest = hashlib.sha256(payload).hexdigest()
+    archive = raw_folder / f"CONCCOMM2501-{digest[:16]}.ZIP"
+    if not archive.exists():
+        with archive.open("xb") as handle:
+            handle.write(payload)
+    # Validate before accepting the download as a source artifact.
+    with zipfile.ZipFile(archive) as bundle:
+        if len(bundle.namelist()) != 1:
+            raise ValueError("downloaded commodity concordance has an unexpected structure")
+    write_concordance_metadata(archive, archive.with_suffix(".metadata.json"))
+    return archive

@@ -41,3 +41,11 @@ Census rate-provision rows. The country is always Canada (`1220`).
   validator enforces that stability within each HTS10 build.
 - Census may revise data. Every distinct API response is retained as a new
   content-addressed snapshot, so the processed panel can be tied to raw bytes.
+
+## Release manifest
+
+`data/processed/release_manifest.json` is the provenance record for the
+published release. It identifies the analytical scope, every Census snapshot,
+the commodity concordance, configuration files, and core outputs. Paths are
+repository-relative and each entry carries a SHA-256 digest. API credentials
+and local absolute paths are never stored in the manifest.

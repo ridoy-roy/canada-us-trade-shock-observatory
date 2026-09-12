@@ -227,7 +227,7 @@ def build() -> Path:
         ["Product universe", f"{len(universe):,} HTS10 lines mapped to {len({row['hs6'] for row in universe})} HS6 codes"],
         ["Outcomes", "Import value, dutiable value, calculated duty; quantity where reported"],
         ["Data grain", "HS6-country-month for full scope; HTS10-country-month for pilot"],
-        ["Source handling", "Exact JSON responses retained with SHA-256 hashes; API key excluded"],
+        ["Source handling", "Exact JSON responses retained; release manifest pins SHA-256 hashes"],
     ]
     table = Table(scope_data, colWidths=[1.45 * inch, 5.55 * inch], repeatRows=1)
     table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white), ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"), ("FONTNAME", (0, 1), (-1, -1), "Helvetica"), ("FONTSIZE", (0, 0), (-1, -1), 8), ("LEADING", (0, 0), (-1, -1), 11), ("GRID", (0, 0), (-1, -1), 0.4, GRID), ("BACKGROUND", (0, 1), (-1, -1), colors.white), ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]), ("VALIGN", (0, 0), (-1, -1), "TOP"), ("LEFTPADDING", (0, 0), (-1, -1), 7), ("RIGHTPADDING", (0, 0), (-1, -1), 7), ("TOPPADDING", (0, 0), (-1, -1), 6), ("BOTTOMPADDING", (0, 0), (-1, -1), 6)]))
@@ -242,7 +242,7 @@ def build() -> Path:
 
     # Results
     story += [Paragraph("2. Full core-steel results", styles["H1x"]), Paragraph("Import value generally declined during 2025, while reported calculated duty increased after the March and June policy changes. The duty-to-value series divides Census calculated duty by total import value.", styles["Bodyx"])]
-    story.append(panel_chart(monthly, [("import_value_usd", "Imports for consumption (USD)", BLUE, 1), ("observed_effective_duty_rate_pct", "Observed duty / value (%)", PURPLE, 1), ("calculated_duty_usd", "Calculated duty (USD)", RED, 1)], width=510, panel_height=82))
+    story.append(panel_chart(monthly, [("import_value_usd", "Imports for consumption (USD)", BLUE, 1), ("observed_effective_duty_rate_pct", "Observed duty / value (%)", PURPLE, 1), ("calculated_duty_usd", "Calculated duty (USD)", RED, 1)], width=510, panel_height=60))
     story += [Spacer(1, 4), Paragraph("Source: U.S. Census Bureau International Trade API; author's calculations. Note: Warm shading marks March and June 2025 transition months.", styles["Smallx"])]
     regime = [
         ["2025 clean window", "Import value", "vs. same 2024 months", "Duty / value"],
@@ -251,8 +251,8 @@ def build() -> Path:
         ["50%: Jul.-Dec.", "$1.640B", "-48.1%", "44.3%"],
     ]
     regime_table = Table(regime, colWidths=[2.0 * inch, 1.5 * inch, 2.0 * inch, 1.25 * inch], repeatRows=1)
-    regime_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white), ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"), ("GRID", (0, 0), (-1, -1), 0.4, GRID), ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]), ("FONTSIZE", (0, 0), (-1, -1), 8), ("ALIGN", (1, 1), (-1, -1), "RIGHT"), ("LEFTPADDING", (0, 0), (-1, -1), 6), ("RIGHTPADDING", (0, 0), (-1, -1), 6), ("TOPPADDING", (0, 0), (-1, -1), 5), ("BOTTOMPADDING", (0, 0), (-1, -1), 5)]))
-    story += [regime_table, Spacer(1, 7), Paragraph("Reading the table: the year-over-year decline is larger in each successive clean policy window. Prices, demand, seasonality, inventory decisions, product substitution, and advance shipments may also matter. A causal estimate would require a comparison group and a specified counterfactual.", styles["Smallx"]), PageBreak()]
+    regime_table.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white), ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"), ("GRID", (0, 0), (-1, -1), 0.4, GRID), ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]), ("FONTSIZE", (0, 0), (-1, -1), 8), ("ALIGN", (1, 1), (-1, -1), "RIGHT"), ("LEFTPADDING", (0, 0), (-1, -1), 6), ("RIGHTPADDING", (0, 0), (-1, -1), 6), ("TOPPADDING", (0, 0), (-1, -1), 3), ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
+    story += [regime_table, Spacer(1, 7), Paragraph("<b>Key interpretation:</b> The year-over-year decline is larger in each successive clean policy window. Prices, demand, seasonality, inventory decisions, product substitution, and advance shipments may also matter. A causal estimate would require a comparison group and a specified counterfactual.", styles["Smallx"]), PageBreak()]
 
     # Product-level contribution analysis
     story += [Paragraph("3. Products contributing most to the decline", styles["H1x"]), Paragraph("The chart ranks HS6 products by the reduction in annual import value from 2024 to 2025. Together, the top ten account for a substantial share of the aggregate decline, led by zinc-coated flat-rolled steel (HS6 721049) and welded rectangular tubing (HS6 730661).", styles["Bodyx"])]
@@ -266,11 +266,11 @@ def build() -> Path:
         ])
     dt = Table(driver_table, colWidths=[0.4 * inch, 0.55 * inch, 2.05 * inch, 1.0 * inch, 1.0 * inch, 1.0 * inch, 0.6 * inch], repeatRows=1)
     dt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white), ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"), ("GRID", (0, 0), (-1, -1), 0.3, GRID), ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]), ("FONTSIZE", (0, 0), (-1, -1), 6.7), ("ALIGN", (0, 1), (1, -1), "CENTER"), ("ALIGN", (3, 1), (-1, -1), "RIGHT"), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("TOPPADDING", (0, 0), (-1, -1), 2.5), ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5)]))
-    story += [Spacer(1, 3), dt, Spacer(1, 5), Paragraph("Source: U.S. Census Bureau International Trade API; author's calculations. Note: This is an accounting decomposition of the observed value change, not a causal estimate of product-level tariff effects.", styles["Smallx"]), PageBreak()]
+    story += [Spacer(1, 3), dt, Spacer(1, 5), Paragraph("<b>Key interpretation:</b> The top ten products account for approximately 51.0% of the aggregate decline. This is an accounting decomposition of the observed value change, not a causal estimate of product-level tariff effects.<br/>Source: U.S. Census Bureau International Trade API; author's calculations.", styles["Smallx"]), PageBreak()]
 
     # Pilot
     story += [Paragraph("4. HTS10 pilot: 7208101500", styles["H1x"]), Paragraph("Flat-rolled iron or nonalloy steel coils, 600 mm or more wide, hot-rolled, pickled, with patterns in relief. Unlike the HS6 aggregate release, this line reports quantity in kilograms.", styles["Bodyx"])]
-    story.append(panel_chart(pilot, [("import_value_usd", "Imports for consumption (USD)", BLUE, 1), ("quantity_1", "Reported quantity (kg)", GREEN, 1), ("calculated_duty_usd", "Calculated duty (USD)", RED, 1)], width=510, panel_height=88))
+    story.append(panel_chart(pilot, [("import_value_usd", "Imports for consumption (USD)", BLUE, 1), ("quantity_1", "Reported quantity (kg)", GREEN, 1), ("calculated_duty_usd", "Calculated duty (USD)", RED, 1)], width=510, panel_height=60))
     pilot_table = [["Month", "Value", "Quantity (kg)", "Duty", "Policy"]]
     policy_labels = {
         "no_section232_tariff": "No Section 232 tariff",
@@ -282,18 +282,28 @@ def build() -> Path:
     for row in pilot:
         pilot_table.append([row["month"], usd(float(row["import_value_usd"])), f"{int(row['quantity_1']):,}", usd(float(row["calculated_duty_usd"])), policy_labels.get(row["policy_regime"], row["policy_regime"])])
     pt = Table(pilot_table, colWidths=[0.85 * inch, 1.15 * inch, 1.35 * inch, 1.05 * inch, 2.35 * inch], repeatRows=1)
-    pt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white), ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"), ("GRID", (0, 0), (-1, -1), 0.3, GRID), ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]), ("FONTSIZE", (0, 0), (-1, -1), 7), ("ALIGN", (1, 1), (3, -1), "RIGHT"), ("LEFTPADDING", (0, 0), (-1, -1), 4), ("RIGHTPADDING", (0, 0), (-1, -1), 4), ("TOPPADDING", (0, 0), (-1, -1), 3), ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
-    story += [Spacer(1, 5), pt, PageBreak()]
+    pt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), NAVY), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white), ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"), ("GRID", (0, 0), (-1, -1), 0.3, GRID), ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]), ("FONTSIZE", (0, 0), (-1, -1), 7), ("ALIGN", (1, 1), (3, -1), "RIGHT"), ("LEFTPADDING", (0, 0), (-1, -1), 4), ("RIGHTPADDING", (0, 0), (-1, -1), 4), ("TOPPADDING", (0, 0), (-1, -1), 1), ("BOTTOMPADDING", (0, 0), (-1, -1), 1)]))
+    story += [
+        Spacer(1, 5),
+        pt,
+        Spacer(1, 6),
+        Paragraph(
+            "<b>Key interpretation:</b> Before March 12, Canada remained exempt from the additional Section 232 steel tariff. After that date, a zero for this pilot can indicate either no reported imports in the month or a reported entry with no Census calculated duty. The chart reproduces reported Census values; it does not replace them with the headline tariff rate.",
+            styles["Smallx"],
+        ),
+        PageBreak(),
+    ]
 
     # QA and sources
     story += [Paragraph("5. Quality, limitations, and reproducibility", styles["H1x"]), Paragraph("Release quality controls", styles["H2x"])]
     qa = [
         ["Check", "Result"],
-        ["Automated tests", "18 passed"],
+        ["Automated tests", "23 passed, including a complete offline release build"],
         ["Official HS6-month rows", f"{validation['panel_rows']:,}"],
         ["Months", str(validation["months"])],
-        ["Raw Census snapshots", str(validation["raw_snapshot_count"])],
+        ["Raw Census snapshots", f"{validation['raw_snapshot_count']} (96 full scope; 12 HTS10 pilot)"],
         ["Snapshot integrity", "SHA-256 verified; API key excluded from metadata"],
+        ["Release provenance", "Manifest pins 108 Census responses, configuration, and core outputs"],
         ["Transition handling", "March and June 2025 flagged; excluded from clean comparisons"],
         ["HS6 quantity", "Unavailable in aggregate API rows; stored as null, not zero"],
     ]
@@ -304,7 +314,17 @@ def build() -> Path:
         [Paragraph("Observed import values, calculated duty, policy timing, and the products contributing most to the annual decline.", styles["Bodyx"]), Paragraph("A causal tariff effect, welfare impact, tariff pass-through, domestic output, employment effects, or trade diversion.", styles["Bodyx"])],
     ], colWidths=[3.45 * inch, 3.45 * inch])
     interpretation_cards.setStyle(TableStyle([("BACKGROUND", (0, 0), (0, -1), PALE_BLUE), ("BACKGROUND", (1, 0), (1, -1), colors.HexColor("#F4EEE4")), ("TEXTCOLOR", (0, 0), (0, 0), BLUE), ("TEXTCOLOR", (1, 0), (1, 0), colors.HexColor("#80633C")), ("BOX", (0, 0), (0, -1), 0.5, colors.HexColor("#BCCDD5")), ("BOX", (1, 0), (1, -1), 0.5, colors.HexColor("#DCC8AA")), ("VALIGN", (0, 0), (-1, -1), "TOP"), ("LEFTPADDING", (0, 0), (-1, -1), 10), ("RIGHTPADDING", (0, 0), (-1, -1), 10), ("TOPPADDING", (0, 0), (-1, -1), 8), ("BOTTOMPADDING", (0, 0), (-1, -1), 8)]))
-    story += [qt, Spacer(1, 10), interpretation_cards, Paragraph("Reproduction", styles["H2x"]), Paragraph("Run <font name='Courier'>python scripts/build_release.py --reuse-snapshots</font> to rebuild the processed files from archived source responses. Run <font name='Courier'>python -m unittest discover -s tests -v</font> to repeat the validation tests.", styles["Bodyx"]), Paragraph("Official sources", styles["H2x"])]
+    story += [
+        qt,
+        Spacer(1, 8),
+        interpretation_cards,
+        Paragraph("Reproduction", styles["H2x"]),
+        Paragraph(
+            "A fresh clone can run <font name='Courier'>python scripts/build_release.py</font> to download the official concordance and current Census data. Run <font name='Courier'>python scripts/verify_release.py</font> to verify the committed release against its manifest. The exact source-level rebuild uses <font name='Courier'>--reuse-snapshots</font> and requires the author's private raw archive; credentials and raw responses are not distributed through Git.",
+            styles["Smallx"],
+        ),
+        Paragraph("Official sources", styles["H2x"]),
+    ]
     sources = [
         ("U.S. Census International Trade API", "https://api.census.gov/data/timeseries/intltrade/imports/hs.html"),
         ("Census API variable definitions", "https://api.census.gov/data/timeseries/intltrade/imports/hs/variables.html"),

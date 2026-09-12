@@ -1,7 +1,8 @@
 # Publishing guide
 
-The recommended release format is a public GitHub repository plus the included
-PDF report.
+When the project is ready to be made public, the recommended release format is
+a GitHub repository plus the included PDF report. Keep the repository private
+until the publication decision is made.
 
 ## Publish with the GitHub website
 
@@ -22,8 +23,9 @@ Suggested repository description:
 
 ## Release checklist
 
-- All automated tests pass.
+- All 23 automated tests pass, including the offline end-to-end build.
+- `python scripts/verify_release.py` confirms the committed release hashes.
 - `release_validation_report.json` reports `passed`.
-- The PDF opens and all five pages render correctly.
+- The PDF opens and all six pages render correctly.
 - No API key or raw response is present in the files to be uploaded.
 - Results are described as observational, not causal.

@@ -154,7 +154,7 @@ def write_release_report(
 | 2024 | ${annual[2024]['value']:,} | ${annual[2024]['duty']:,} |
 | 2025 | ${annual[2025]['value']:,} | ${annual[2025]['duty']:,} |
 
-The value of imports in scope was **{-1 * (annual[2025]['value'] / annual[2024]['value'] - 1):.1%} lower** in 2025 than in 2024. This comparison is descriptive. Census calculated duty can include duties beyond Section 232, so it should not be read as a stand-alone measure of the steel tariff.
+The value of imports in scope was **{-1 * (annual[2025]['value'] / annual[2024]['value'] - 1):.1%} lower** in 2025 than in 2024. This comparison is descriptive. Census calculated duty can include duties beyond Section 232, so it should not be read as a stand-alone measure of the steel tariff. The $0 total for 2024 is the value reported by Census for the selected Canada-origin total rows, consistent with Canada's Section 232 exemption during that year; it is not a zero imputed by the pipeline.
 
 ### Clean-month regime comparison
 
@@ -171,6 +171,10 @@ The year-over-year decline is larger in each successive window. The reported dut
 {chr(10).join(product_lines)}
 
 The ranking is an accounting decomposition of the value change, not an estimate of each product's causal response to the tariff.
+
+## Release integrity
+
+The release manifest records SHA-256 hashes for all 108 Census snapshots (96 full-scope and 12 HTS10 pilot responses), the official commodity concordance, analytical configuration, and core outputs. Public users can verify the committed release files with `python scripts/verify_release.py`. A fresh build downloads the concordance and current Census data automatically; an exact source-level rebuild requires the author's manifest-pinned raw archive, which is intentionally excluded from Git.
 
 ## Interpretation boundaries
 

@@ -1,0 +1,885 @@
+{
+  "schema_version": 1,
+  "release": "v0",
+  "generated_at_utc": "2026-09-12T07:44:35.177455+00:00",
+  "scope": {
+    "country_code": "1220",
+    "months": [
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12"
+    ],
+    "hs6_prefixes": [
+      "720",
+      "721",
+      "722",
+      "730"
+    ],
+    "pilot_hts10": "7208101500",
+    "product_scope": "section232_core_steel"
+  },
+  "source_data": {
+    "census_api": {
+      "endpoint": "https://api.census.gov/data/timeseries/intltrade/imports/hs",
+      "snapshots": [
+        {
+          "month": "2024-01",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-01/hs6-720star-508707d5eda3caf0.json",
+          "sha256": "508707d5eda3caf04a95bd70fbcd28b118b9638dec29290e79a6c4346e031e43",
+          "bytes": 9179
+        },
+        {
+          "month": "2024-01",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-01/hs6-721star-2c6bb7ca532fd304.json",
+          "sha256": "2c6bb7ca532fd304af3e45f51d5264acd07eceb25116ad1b4dc7c0e5fbf271ec",
+          "bytes": 11383
+        },
+        {
+          "month": "2024-01",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-01/hs6-722star-9eda2306bcaa88ef.json",
+          "sha256": "9eda2306bcaa88ef5b317dc834bfa928f2c1bf0fc4e87ff6a520e0c37cb5c796",
+          "bytes": 5876
+        },
+        {
+          "month": "2024-01",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-01/hs6-730star-d1a6cf8c3e0d858e.json",
+          "sha256": "d1a6cf8c3e0d858ede3049b7e478a302b03e0a1bc544b908dc5853c1b1333f0d",
+          "bytes": 8953
+        },
+        {
+          "month": "2024-02",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-02/hs6-720star-cbb7765d10b562a2.json",
+          "sha256": "cbb7765d10b562a2d8dbc1607aaf3e109f1e32f75a11537316590cb3e0d03ab5",
+          "bytes": 9565
+        },
+        {
+          "month": "2024-02",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-02/hs6-721star-ea737dc72a1b8873.json",
+          "sha256": "ea737dc72a1b88732f8b533390757c025643a9ad0a93266f1b4f6a5110fa0c95",
+          "bytes": 12434
+        },
+        {
+          "month": "2024-02",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-02/hs6-722star-7494b9e77d8fd809.json",
+          "sha256": "7494b9e77d8fd809b998388378f58facdcb2fb41cea072c779b18c123393eeb2",
+          "bytes": 6069
+        },
+        {
+          "month": "2024-02",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-02/hs6-730star-44ddd24e2481f1d9.json",
+          "sha256": "44ddd24e2481f1d9a6998e8a9a0dc10601933d4e203df3466cb8cfb76eba5d47",
+          "bytes": 9794
+        },
+        {
+          "month": "2024-03",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-03/hs6-720star-6da74c1fd6b05379.json",
+          "sha256": "6da74c1fd6b05379675b2a31f84cb1bd9fad3b08fa3f32b966a28fe9634d529c",
+          "bytes": 9811
+        },
+        {
+          "month": "2024-03",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-03/hs6-721star-29a748820c20dfed.json",
+          "sha256": "29a748820c20dfed7e4b55e96eaaf67e0c008ffc1e4cda3f3fe6c79e76f27172",
+          "bytes": 13222
+        },
+        {
+          "month": "2024-03",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-03/hs6-722star-a7e3c65e9394323a.json",
+          "sha256": "a7e3c65e9394323ae2a73f5329a21f2c35cd7dbb9e454cb2ef0657783241e98a",
+          "bytes": 6240
+        },
+        {
+          "month": "2024-03",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-03/hs6-730star-88e2b03edf87e647.json",
+          "sha256": "88e2b03edf87e6478bd1b6f362bba8bd279e8d56319193eaa8f6ff9b5cd574b9",
+          "bytes": 10014
+        },
+        {
+          "month": "2024-04",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-04/hs6-720star-d4d949c82f1d01c8.json",
+          "sha256": "d4d949c82f1d01c845adb9eeb827aa1b909f7c2706de94a8e7a26720d990cadb",
+          "bytes": 9821
+        },
+        {
+          "month": "2024-04",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-04/hs6-721star-8898f7f0e04e9efd.json",
+          "sha256": "8898f7f0e04e9efd6d0491d18dfff9cb6a17c2d522845b58571697c9ba9b89a8",
+          "bytes": 13198
+        },
+        {
+          "month": "2024-04",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-04/hs6-722star-f0420585250091a6.json",
+          "sha256": "f0420585250091a6fed0b4d37df735ccb3dd3091b2a84835b43d4625ec4195c4",
+          "bytes": 6558
+        },
+        {
+          "month": "2024-04",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-04/hs6-730star-7dc15cbae4a37329.json",
+          "sha256": "7dc15cbae4a373295dceb7dba245a9294768eeb00e210a263290fc59c0e04285",
+          "bytes": 10190
+        },
+        {
+          "month": "2024-05",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-05/hs6-720star-8da90b5ba3aff024.json",
+          "sha256": "8da90b5ba3aff0244e00fd1b3fd13975552cf4fe662fa29c5624045df3c2e28c",
+          "bytes": 9939
+        },
+        {
+          "month": "2024-05",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-05/hs6-721star-f257bc1418d49d20.json",
+          "sha256": "f257bc1418d49d20fc4c27ef79e1dde0dfe83d303f19620b66c6c574e72f25c4",
+          "bytes": 13204
+        },
+        {
+          "month": "2024-05",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-05/hs6-722star-c4cc7d63eb9b3505.json",
+          "sha256": "c4cc7d63eb9b3505ff426f1047432b47408aa28eb6305739f4918a94f4e01838",
+          "bytes": 6539
+        },
+        {
+          "month": "2024-05",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-05/hs6-730star-d8fd5d3279d6045d.json",
+          "sha256": "d8fd5d3279d6045de044b8faa7c3c1ace6503346140ed7fbd9df34acf94f3848",
+          "bytes": 10390
+        },
+        {
+          "month": "2024-06",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-06/hs6-720star-fe15de1b4fd9cd33.json",
+          "sha256": "fe15de1b4fd9cd333ab91d786253215df2b901c12108f2aa388a985b3d20e410",
+          "bytes": 10092
+        },
+        {
+          "month": "2024-06",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-06/hs6-721star-37378b658f726a7f.json",
+          "sha256": "37378b658f726a7fb374c11adba75e8fcd5de9a468427ebb5c983da5a0e8fe4b",
+          "bytes": 13209
+        },
+        {
+          "month": "2024-06",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-06/hs6-722star-ac68b12be1d2d283.json",
+          "sha256": "ac68b12be1d2d2834cde39dcdf8f355a00288d1be971df22ec0c7bbfc74e0a4c",
+          "bytes": 6554
+        },
+        {
+          "month": "2024-06",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-06/hs6-730star-2e63767635797d0b.json",
+          "sha256": "2e63767635797d0be79fe004f13438630dc6428d76bccd9a3d7e8183c910714a",
+          "bytes": 10586
+        },
+        {
+          "month": "2024-07",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-07/hs6-720star-0a9ef6f55f5219a2.json",
+          "sha256": "0a9ef6f55f5219a214dc636973077a4bfda5289695046d26cfc519d77c7e56e3",
+          "bytes": 10095
+        },
+        {
+          "month": "2024-07",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-07/hs6-721star-57808500a96d8762.json",
+          "sha256": "57808500a96d87629e0cb0487ab4080d99a2f3aea1686b776678de67881c5c0a",
+          "bytes": 13187
+        },
+        {
+          "month": "2024-07",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-07/hs6-722star-6b86f477d573a83a.json",
+          "sha256": "6b86f477d573a83a07aad8b253065569babb04ad7e8417eff9a3bfae853c8d75",
+          "bytes": 6551
+        },
+        {
+          "month": "2024-07",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-07/hs6-730star-ca956d7aa74b833b.json",
+          "sha256": "ca956d7aa74b833be8a54d6e011427aaf10e1938a0ca0062c0267439d477ffec",
+          "bytes": 10564
+        },
+        {
+          "month": "2024-08",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-08/hs6-720star-a98e60b56dfbfd96.json",
+          "sha256": "a98e60b56dfbfd9674652e54a487cedc151a26b75481d08a12881dea1ad17102",
+          "bytes": 10262
+        },
+        {
+          "month": "2024-08",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-08/hs6-721star-07aed97a9da26394.json",
+          "sha256": "07aed97a9da2639421f36071c6cad0ba4ad3c2c59a7b4c261c68bf6c6c15a0fe",
+          "bytes": 13203
+        },
+        {
+          "month": "2024-08",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-08/hs6-722star-4ab32fb0c42fbd98.json",
+          "sha256": "4ab32fb0c42fbd987f6f03cbbb2b1dd8f52e09e4b126e22d39e5065de3c48529",
+          "bytes": 6549
+        },
+        {
+          "month": "2024-08",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-08/hs6-730star-6e111ae0262e26db.json",
+          "sha256": "6e111ae0262e26dbee23f350f793dd086a2812e89511c4fec05292fd75be71b8",
+          "bytes": 10559
+        },
+        {
+          "month": "2024-09",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-09/hs6-720star-dcda36749b687c13.json",
+          "sha256": "dcda36749b687c137e495ad8e6bea3240cc0aae55c7856b38c8f3c92d75bd002",
+          "bytes": 10254
+        },
+        {
+          "month": "2024-09",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-09/hs6-721star-4eb3c4018b536838.json",
+          "sha256": "4eb3c4018b5368387e1604adb1a93ef77e047edba578968e1cee4ebb268da78a",
+          "bytes": 13203
+        },
+        {
+          "month": "2024-09",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-09/hs6-722star-a230875596cb7806.json",
+          "sha256": "a230875596cb780600ddfa29003b7d51f4d206c2ad65929e42a846444f1ad8af",
+          "bytes": 6550
+        },
+        {
+          "month": "2024-09",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-09/hs6-730star-2a522b9f3db81e05.json",
+          "sha256": "2a522b9f3db81e057c94706d19c09def44add624776d935b3dc2f41fd234e797",
+          "bytes": 10763
+        },
+        {
+          "month": "2024-10",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-10/hs6-720star-cc926d681663504e.json",
+          "sha256": "cc926d681663504e7b66025abe6895523828d7b2b3bb999e854a00264f739854",
+          "bytes": 10388
+        },
+        {
+          "month": "2024-10",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-10/hs6-721star-14175f17bff8ad27.json",
+          "sha256": "14175f17bff8ad27bce2b51a864db3110f29a793cdc7452e603b396712b44ddc",
+          "bytes": 13207
+        },
+        {
+          "month": "2024-10",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-10/hs6-722star-6d0b53635477028e.json",
+          "sha256": "6d0b53635477028ecd77fdfac7a6a5e2d5d995066dcef71af89916f8c1fc4af6",
+          "bytes": 6548
+        },
+        {
+          "month": "2024-10",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-10/hs6-730star-1fc21d77ce556db9.json",
+          "sha256": "1fc21d77ce556db9a985aa72d77f1a2f89e810467103611a9743ecee0eebaf09",
+          "bytes": 10759
+        },
+        {
+          "month": "2024-11",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-11/hs6-720star-60613fbfa22610c4.json",
+          "sha256": "60613fbfa22610c455793651c3e2e9aa66e1a77c289e5ccca433011e7ed959f3",
+          "bytes": 10389
+        },
+        {
+          "month": "2024-11",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-11/hs6-721star-92721f8ded51b500.json",
+          "sha256": "92721f8ded51b50052f41ac79afdc13d94947257853af66016e563a72b099ec4",
+          "bytes": 13445
+        },
+        {
+          "month": "2024-11",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-11/hs6-722star-54da262f91b3ce1f.json",
+          "sha256": "54da262f91b3ce1f00977fbec510e040d43fb69ac33c64826529e301e4aedb86",
+          "bytes": 6555
+        },
+        {
+          "month": "2024-11",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-11/hs6-730star-b47a6b83d18d5b36.json",
+          "sha256": "b47a6b83d18d5b361493d5820609e81689b63629c1003e2c69e8a02eb2b77bf7",
+          "bytes": 10767
+        },
+        {
+          "month": "2024-12",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2024-12/hs6-720star-2ba032d2b7431563.json",
+          "sha256": "2ba032d2b7431563f48ef8c88cf0621be28e4a2ea111235f3edbdbe882ca8dfd",
+          "bytes": 10384
+        },
+        {
+          "month": "2024-12",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2024-12/hs6-721star-a73f405041c4f3e8.json",
+          "sha256": "a73f405041c4f3e8467517ec90998fbab2933d9bbe6d6d4c9d3fde783e1b97b9",
+          "bytes": 13435
+        },
+        {
+          "month": "2024-12",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2024-12/hs6-722star-fda17685f505af86.json",
+          "sha256": "fda17685f505af86f857dd26a47a2d6dfce025133baa08bbe43c75efd8053951",
+          "bytes": 6724
+        },
+        {
+          "month": "2024-12",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2024-12/hs6-730star-629bcf6c458c526a.json",
+          "sha256": "629bcf6c458c526a63eabbb80bf08cdf2844ae15c186f6f6ce7fa5187b4c1d03",
+          "bytes": 10769
+        },
+        {
+          "month": "2025-01",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-01/hs6-720star-ad31cac7823e6234.json",
+          "sha256": "ad31cac7823e62348c032173714e5cc70ff93540c41969ee9f6e59975ee983db",
+          "bytes": 9725
+        },
+        {
+          "month": "2025-01",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-01/hs6-721star-2567af2bb2ce0a73.json",
+          "sha256": "2567af2bb2ce0a73811cc16ec6704ba293421d8e73abc944f1afe69df7a1eecd",
+          "bytes": 11216
+        },
+        {
+          "month": "2025-01",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-01/hs6-722star-cfb32f6a663f2b03.json",
+          "sha256": "cfb32f6a663f2b033c3fd1f2e3bbb22a9adce1af5d216f4698f1aa2e0685ce2b",
+          "bytes": 6404
+        },
+        {
+          "month": "2025-01",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-01/hs6-730star-d785d4d6a1a47046.json",
+          "sha256": "d785d4d6a1a47046d30293ad1e23ed9887b390b7930ce42684c4a46dbeb119aa",
+          "bytes": 8984
+        },
+        {
+          "month": "2025-02",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-02/hs6-720star-5a59b973ef37a247.json",
+          "sha256": "5a59b973ef37a24786ffe40b269b3b02e7ee103c6d6e6686d84a75982257982d",
+          "bytes": 9718
+        },
+        {
+          "month": "2025-02",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-02/hs6-721star-27c6030368c69b0b.json",
+          "sha256": "27c6030368c69b0bc4b167a42d9371fddb2901b8f484f1effe63bebf2f7564f0",
+          "bytes": 12039
+        },
+        {
+          "month": "2025-02",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-02/hs6-722star-f598a39e4f05b88c.json",
+          "sha256": "f598a39e4f05b88cc569adf44614611797828dd3eb15dc6533dbaa8bc02b4585",
+          "bytes": 6721
+        },
+        {
+          "month": "2025-02",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-02/hs6-730star-77d2a020e675d9d9.json",
+          "sha256": "77d2a020e675d9d9eb11f5c217dfafd4ad1cbf8e8891d01c9cf42d4085264ced",
+          "bytes": 9154
+        },
+        {
+          "month": "2025-03",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-03/hs6-720star-8882ad25728cb132.json",
+          "sha256": "8882ad25728cb1327917a9c818a4631e859e94a7642986737a18eb191be3138c",
+          "bytes": 10031
+        },
+        {
+          "month": "2025-03",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-03/hs6-721star-e2531021dafa008c.json",
+          "sha256": "e2531021dafa008cf3901c1753a5ef15d5c1f465128fec239a90050fea564d7b",
+          "bytes": 12761
+        },
+        {
+          "month": "2025-03",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-03/hs6-722star-2f93a761f6cb1828.json",
+          "sha256": "2f93a761f6cb18285e9c2c694f8545554377e89039fb89ff2df219e5fa1db7da",
+          "bytes": 6796
+        },
+        {
+          "month": "2025-03",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-03/hs6-730star-4a80cfb743a4625a.json",
+          "sha256": "4a80cfb743a4625a68c80e4a569e27c84a88e49e4af8cff69776b54b719dfb97",
+          "bytes": 9969
+        },
+        {
+          "month": "2025-04",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-04/hs6-720star-5bdc1cd4bab68ad2.json",
+          "sha256": "5bdc1cd4bab68ad269bf67994f35783a0b73120485f41c8731b746417dc36bb6",
+          "bytes": 10234
+        },
+        {
+          "month": "2025-04",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-04/hs6-721star-32a7dbfbd7fea353.json",
+          "sha256": "32a7dbfbd7fea353bf20e6e7c2b8af9897bdaed5062d68cb9ee5db9cdedf7332",
+          "bytes": 12943
+        },
+        {
+          "month": "2025-04",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-04/hs6-722star-45d2b789987a3379.json",
+          "sha256": "45d2b789987a3379a6a7dea00254f00b6efbd13f2978aa5774270725c364c064",
+          "bytes": 6915
+        },
+        {
+          "month": "2025-04",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-04/hs6-730star-084dbd795351a382.json",
+          "sha256": "084dbd795351a38274c57204cdd2c0325088e39ec359acfd1364a5834d9a5c3a",
+          "bytes": 10086
+        },
+        {
+          "month": "2025-05",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-05/hs6-720star-91a2b6d9c0d1f270.json",
+          "sha256": "91a2b6d9c0d1f2702d267ef89e2ada83e0f16aff5e0fad9205936ca7739b5fe1",
+          "bytes": 10604
+        },
+        {
+          "month": "2025-05",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-05/hs6-721star-9652e64df53d84cf.json",
+          "sha256": "9652e64df53d84cf8c787c1b85940d9ca6d0fdd0200b2cff7b7cb308a379ee8d",
+          "bytes": 13178
+        },
+        {
+          "month": "2025-05",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-05/hs6-722star-f650de18cd7a8678.json",
+          "sha256": "f650de18cd7a8678d79255661a009250a6720b6020393c9d8b43086c42955339",
+          "bytes": 7096
+        },
+        {
+          "month": "2025-05",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-05/hs6-730star-505eaca11d317e9c.json",
+          "sha256": "505eaca11d317e9c57f04f33bbb2451f74a4e306d178227d6bd888394a30afe2",
+          "bytes": 10081
+        },
+        {
+          "month": "2025-06",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-06/hs6-720star-c3b71d5e9ddc2424.json",
+          "sha256": "c3b71d5e9ddc242493b809a6328a0bb306304ee81ed7c4669a1a1ee4acf5f824",
+          "bytes": 10704
+        },
+        {
+          "month": "2025-06",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-06/hs6-721star-6e836396d1182baf.json",
+          "sha256": "6e836396d1182baf74b56a989ff04f3c8ac706d86c6bf0bb5ebb66d48e8631be",
+          "bytes": 13398
+        },
+        {
+          "month": "2025-06",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-06/hs6-722star-5f9116024f23c3b2.json",
+          "sha256": "5f9116024f23c3b2b8f7332df39127044cf54fb813170469717fddc17d1c524b",
+          "bytes": 7081
+        },
+        {
+          "month": "2025-06",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-06/hs6-730star-6cec1d8ee028562f.json",
+          "sha256": "6cec1d8ee028562f1893b29faeeb1c758aa2a6cadca63944272febae3d994f8e",
+          "bytes": 10532
+        },
+        {
+          "month": "2025-07",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-07/hs6-720star-536bc5f318fbe693.json",
+          "sha256": "536bc5f318fbe69329d160765ed26af4fb84ef396f6954480cfa24cac8171501",
+          "bytes": 10685
+        },
+        {
+          "month": "2025-07",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-07/hs6-721star-ef78331346bea3cc.json",
+          "sha256": "ef78331346bea3ccbdde2904532881c7df04065b3ef14a891c7a4dbf173b72c6",
+          "bytes": 13374
+        },
+        {
+          "month": "2025-07",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-07/hs6-722star-f79f7e0129026db5.json",
+          "sha256": "f79f7e0129026db536a46e1b3a8b37bae55af9ef70917348270f9fa314dd91ad",
+          "bytes": 7055
+        },
+        {
+          "month": "2025-07",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-07/hs6-730star-ac9b7a438c16daef.json",
+          "sha256": "ac9b7a438c16daef2217d80985a2989bf7e11b48e43d878920e7aa48e1084416",
+          "bytes": 10445
+        },
+        {
+          "month": "2025-08",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-08/hs6-720star-0ee088edcdc1d36a.json",
+          "sha256": "0ee088edcdc1d36a93d20a2da6c2cd46b711f397f4ebbff3f37c7559ed537de6",
+          "bytes": 10723
+        },
+        {
+          "month": "2025-08",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-08/hs6-721star-8c1ca6069152fe72.json",
+          "sha256": "8c1ca6069152fe72ffc3a1a6edf26d9a36d137f8d2b6d11dff9a8aca234d7ca2",
+          "bytes": 13582
+        },
+        {
+          "month": "2025-08",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-08/hs6-722star-2f5764fb345a03b7.json",
+          "sha256": "2f5764fb345a03b7b57bab9e8c5ae970e23ea8695487cb142dda26cd5e851064",
+          "bytes": 7087
+        },
+        {
+          "month": "2025-08",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-08/hs6-730star-9679e9dcc4497540.json",
+          "sha256": "9679e9dcc4497540e797c9733cb9ffedfec5ea72581c9bb141983a4621263dd9",
+          "bytes": 10651
+        },
+        {
+          "month": "2025-09",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-09/hs6-720star-1ad3150ea6db301d.json",
+          "sha256": "1ad3150ea6db301d257600d86cffbe26d66fb53c9fb11935df570f191e4e62da",
+          "bytes": 10699
+        },
+        {
+          "month": "2025-09",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-09/hs6-721star-bdb0af020c7c78f7.json",
+          "sha256": "bdb0af020c7c78f7a9bde5f5e242d7e889cc40bc65c0b2895ae41eee14378e18",
+          "bytes": 13564
+        },
+        {
+          "month": "2025-09",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-09/hs6-722star-459af3472610b050.json",
+          "sha256": "459af3472610b050ff76c28c0cc42ff37a16b11c994a4d4b69bd491052d02265",
+          "bytes": 7089
+        },
+        {
+          "month": "2025-09",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-09/hs6-730star-cf4b9d32c88fc62b.json",
+          "sha256": "cf4b9d32c88fc62bf6c43b515dfaf6012512edbdce78334416872d561f3f8601",
+          "bytes": 10654
+        },
+        {
+          "month": "2025-10",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-10/hs6-720star-87caefcabea85911.json",
+          "sha256": "87caefcabea85911ea8e408eca953834b2dde18ada4819d7786c94d9e800a1b5",
+          "bytes": 10700
+        },
+        {
+          "month": "2025-10",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-10/hs6-721star-d620dfad70345593.json",
+          "sha256": "d620dfad7034559314a3c687fd5666c705960f7e21f5960fe5e46886edf797fb",
+          "bytes": 13774
+        },
+        {
+          "month": "2025-10",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-10/hs6-722star-3047940933ba2fc4.json",
+          "sha256": "3047940933ba2fc4488aa39d27c88d55c15a4cd5cbd371f941e65de92d8a3976",
+          "bytes": 7106
+        },
+        {
+          "month": "2025-10",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-10/hs6-730star-519eddbd4daa4762.json",
+          "sha256": "519eddbd4daa47625d537a95cde341f400e64c373745d319db5fa9783d35d38a",
+          "bytes": 10672
+        },
+        {
+          "month": "2025-11",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-11/hs6-720star-7ce333ca369c1a91.json",
+          "sha256": "7ce333ca369c1a917c85dda3e2d3f7d520cfe9466d664f7190b236973b9ecea4",
+          "bytes": 10693
+        },
+        {
+          "month": "2025-11",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-11/hs6-721star-e02fcb93a67896b4.json",
+          "sha256": "e02fcb93a67896b4a78c524d45207de91ace5dd27a71abcff9f20b2fbab70a7a",
+          "bytes": 14001
+        },
+        {
+          "month": "2025-11",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-11/hs6-722star-ea4f03fcafaa496d.json",
+          "sha256": "ea4f03fcafaa496ddf44064b3d7abb7a7bbb5bba3ddf83a5382c11450a54def6",
+          "bytes": 7107
+        },
+        {
+          "month": "2025-11",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-11/hs6-730star-90284a1271b2ba6a.json",
+          "sha256": "90284a1271b2ba6ab09f79b13b61ee0af134976f4999ba3d4521da42e37b2e06",
+          "bytes": 10675
+        },
+        {
+          "month": "2025-12",
+          "prefix": "720",
+          "path": "data/raw/census_imports_hs/2025-12/hs6-720star-b7250743da7e7429.json",
+          "sha256": "b7250743da7e7429408aeb88ae8244c6b241c1a19b273a0b909114416faa1d73",
+          "bytes": 10696
+        },
+        {
+          "month": "2025-12",
+          "prefix": "721",
+          "path": "data/raw/census_imports_hs/2025-12/hs6-721star-dd777baff4d40791.json",
+          "sha256": "dd777baff4d40791b10a9ec08f6d55cb2804d87a4f354465a8be1d3995edef3c",
+          "bytes": 14235
+        },
+        {
+          "month": "2025-12",
+          "prefix": "722",
+          "path": "data/raw/census_imports_hs/2025-12/hs6-722star-c2c86e1b1301ee99.json",
+          "sha256": "c2c86e1b1301ee99a44b325402b90e5cb8d52bc3b0aa20fe5f19354759f2d2fb",
+          "bytes": 7048
+        },
+        {
+          "month": "2025-12",
+          "prefix": "730",
+          "path": "data/raw/census_imports_hs/2025-12/hs6-730star-7b0551e55de966f4.json",
+          "sha256": "7b0551e55de966f40354e69e5e2f34c9792d89d66cfb0e0acb2d75ecd2bebfa9",
+          "bytes": 10641
+        }
+      ],
+      "pilot_snapshots": [
+        {
+          "month": "2025-01",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-01/7208101500-b86d4c4e231311b3.json",
+          "sha256": "b86d4c4e231311b31a9a476190ffb0ada677184ef5572417f8fef77ae11230f8",
+          "bytes": 691
+        },
+        {
+          "month": "2025-02",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-02/7208101500-82bad4e99bc4e8b6.json",
+          "sha256": "82bad4e99bc4e8b6c7d6dd0076e3f4aef19fbad9bc038dce5788119ee9308b03",
+          "bytes": 689
+        },
+        {
+          "month": "2025-03",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-03/7208101500-ec4e69b15b52d990.json",
+          "sha256": "ec4e69b15b52d990e8ccdecf9d93f19fb2d8445b985ff72f10f36a9da4efb68f",
+          "bytes": 937
+        },
+        {
+          "month": "2025-04",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-04/7208101500-b2ed8f837918f732.json",
+          "sha256": "b2ed8f837918f732329199accb3ca905d1bff49adfe0d43c8e54bc48c93c8188",
+          "bytes": 913
+        },
+        {
+          "month": "2025-05",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-05/7208101500-1aa273fc182ed61c.json",
+          "sha256": "1aa273fc182ed61cd547a159f677b859c3ca5741547c2e5e9927aec0a3b7ea85",
+          "bytes": 1185
+        },
+        {
+          "month": "2025-06",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-06/7208101500-dbd61f5657a6f8b0.json",
+          "sha256": "dbd61f5657a6f8b0c79ed7ce2993ec5aecdf0b2d4029fc88d06cd2cf5faac53c",
+          "bytes": 1185
+        },
+        {
+          "month": "2025-07",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-07/7208101500-aa6a0b4d14501d62.json",
+          "sha256": "aa6a0b4d14501d621f3672a5e134264adcd0d2d55b59b40291943d383c44ebe2",
+          "bytes": 1155
+        },
+        {
+          "month": "2025-08",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-08/7208101500-b11dc272dbf888a4.json",
+          "sha256": "b11dc272dbf888a40b39e9751f1143d436131e5d10d75a74d89e5a90d838cb4b",
+          "bytes": 1155
+        },
+        {
+          "month": "2025-09",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-09/7208101500-64825587ed498314.json",
+          "sha256": "64825587ed4983147cd1114434b9cc0f12e21fe9083671c24e88955683c6488f",
+          "bytes": 1155
+        },
+        {
+          "month": "2025-10",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-10/7208101500-094607339016648f.json",
+          "sha256": "094607339016648f7112394d2afbdde5d9ea21249c89bb6f353c33cf34fd8659",
+          "bytes": 1421
+        },
+        {
+          "month": "2025-11",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-11/7208101500-426a224ffc313967.json",
+          "sha256": "426a224ffc31396775f0647bd53a4287bc195142a2e2321b14f7be4832e9d0d0",
+          "bytes": 1429
+        },
+        {
+          "month": "2025-12",
+          "hts10": "7208101500",
+          "path": "data/raw/census_imports_hs/2025-12/7208101500-3bd952d98ae425f0.json",
+          "sha256": "3bd952d98ae425f00a29e03f5c76eb879108e6f8b8acab420de4edcf8e60036f",
+          "bytes": 1397
+        }
+      ]
+    },
+    "commodity_concordance": {
+      "source_url": "https://www.census.gov/trade/downloads/concordance/comm_month/2025/CONCCOMM2501.ZIP",
+      "path": "data/raw/usitc_hts/CONCCOMM2501.ZIP",
+      "sha256": "7ae26bcf619636b7830f1f856889c0a8b365024f86cfd46e4bdbbaa6ff421206",
+      "bytes": 1215557
+    }
+  },
+  "configuration": [
+    {
+      "path": "config/core_steel_hs6_ranges.csv",
+      "sha256": "e399d611dad62dfc7bf1be22bb73d5f08e47f1fdea8c4e387c07f706c053d7ef"
+    },
+    {
+      "path": "config/policy_history.csv",
+      "sha256": "4852c9f05912ffd0e607937f2020a0a5d648d30ff5808824c05b8b0fd53f11c4"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/processed/core_steel_product_universe_2025.csv",
+      "sha256": "73b3f67beae12c8e89eb8aca13528709de5734e69a468dfaabdded15ab241707",
+      "bytes": 217618
+    },
+    {
+      "path": "data/processed/core_steel_hs6_monthly_panel.csv",
+      "sha256": "9470fa1256ff8653c22e36d7a21ff4b759a03cf7faea3ab81ed738d1dce8f053",
+      "bytes": 1092784
+    },
+    {
+      "path": "data/processed/core_steel_monthly_summary.csv",
+      "sha256": "af3a406cb66c73582e6a3e1a678588d5452d0123e45ff6342e79195856d33509",
+      "bytes": 3321
+    },
+    {
+      "path": "data/processed/top_10_hs6_decline_contributors.csv",
+      "sha256": "c559a724afb3ec301ea5c0ab3594e4fc5a40d975f02f3d92b3971b34130b00d8",
+      "bytes": 2744
+    },
+    {
+      "path": "data/processed/release_validation_report.json",
+      "sha256": "2f02d72c4f0ce36b6b34b83da9ed65658d73b850abe202e6b09943e509a0befc",
+      "bytes": 446
+    },
+    {
+      "path": "data/processed/trade_policy_panel.csv",
+      "sha256": "06c08926f21775cc8df459ee0671ce3dcdb9f2b26e009a740febe8c4ef353d28",
+      "bytes": 5623
+    },
+    {
+      "path": "data/processed/validation_report.json",
+      "sha256": "18e8661088140eabfbd97fdde2d80821f9a3a4b3b89c33715c30374eddd00459",
+      "bytes": 1225
+    },
+    {
+      "path": "artifacts/core_steel_2024_2025_monthly.svg",
+      "sha256": "66b8adddc8d887f62caee3f91096f60dd5c0e5fd09c665ae38e0c98a8d4a4eaf",
+      "bytes": 5153
+    },
+    {
+      "path": "artifacts/top_10_hs6_decline_contributors.svg",
+      "sha256": "154f45ee8fea186250f65fbc98f9aed699576228331f1da0fd38f9a6616facfd",
+      "bytes": 3714
+    },
+    {
+      "path": "artifacts/pilot_7208101500_monthly.svg",
+      "sha256": "e70217012f141b0f92c47b184706cc0e7bb917d991249c1370f4f53023470969",
+      "bytes": 6128
+    },
+    {
+      "path": "reports/v0_release_report.md",
+      "sha256": "6ebb3feefe22364376092e7a8466739750d7f4e3ae6f969ab1a46cbce550504a",
+      "bytes": 4435
+    },
+    {
+      "path": "reports/annual_summary.json",
+      "sha256": "ed71da539b379cacb3469d704fc65f505de579dac689c6f9a668805f5d5ecb76",
+      "bytes": 134
+    }
+  ]
+}
