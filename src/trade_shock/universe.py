@@ -10,6 +10,8 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from .io_utils import write_text_lf
+
 
 CONCORDANCE_URL = "https://www.census.gov/trade/downloads/concordance/comm_month/2025/CONCCOMM2501.ZIP"
 
@@ -63,7 +65,7 @@ def write_concordance_metadata(archive: Path, output: Path) -> None:
         "sha256": hashlib.sha256(payload).hexdigest(),
         "bytes": len(payload),
     }
-    output.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
+    write_text_lf(output, json.dumps(metadata, indent=2) + "\n")
 
 
 def ensure_commodity_concordance(

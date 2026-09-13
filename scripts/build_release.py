@@ -1,7 +1,6 @@
 from pathlib import Path
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import csv
 import json
 import sys
 
@@ -19,6 +18,7 @@ from trade_shock.hs6_panel import (  # noqa: E402
     summarize_product_changes,
     validate_release,
 )
+from trade_shock.io_utils import write_dict_rows_csv, write_text_lf  # noqa: E402
 from trade_shock.release import write_monthly_chart, write_product_decline_chart, write_release_report  # noqa: E402
 from trade_shock.provenance import (  # noqa: E402
     load_release_manifest,
@@ -41,11 +41,7 @@ PILOT_HTS10 = "7208101500"
 
 
 def write_csv(rows, path):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
-        writer.writeheader()
-        writer.writerows(rows)
+    write_dict_rows_csv(rows, path)
 
 
 def main(argv=None):
@@ -153,12 +149,14 @@ def main(argv=None):
     write_csv(panel, ROOT / "data" / "processed" / "core_steel_hs6_monthly_panel.csv")
     write_csv(summary, ROOT / "data" / "processed" / "core_steel_monthly_summary.csv")
     write_csv(product_changes, ROOT / "data" / "processed" / "top_10_hs6_decline_contributors.csv")
-    (ROOT / "data" / "processed" / "release_validation_report.json").write_text(
-        json.dumps(validation, indent=2) + "\n", encoding="utf-8"
+    write_text_lf(
+        ROOT / "data" / "processed" / "release_validation_report.json",
+        json.dumps(validation, indent=2) + "\n",
     )
     write_csv(pilot_panel, ROOT / "data" / "processed" / "trade_policy_panel.csv")
-    (ROOT / "data" / "processed" / "validation_report.json").write_text(
-        json.dumps(pilot_validation, indent=2) + "\n", encoding="utf-8"
+    write_text_lf(
+        ROOT / "data" / "processed" / "validation_report.json",
+        json.dumps(pilot_validation, indent=2) + "\n",
     )
     write_pilot_chart(
         pilot_panel,

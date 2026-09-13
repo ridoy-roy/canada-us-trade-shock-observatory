@@ -5,6 +5,8 @@ from __future__ import annotations
 import html
 from pathlib import Path
 
+from .io_utils import write_text_lf
+
 
 def write_pilot_chart(panel: list[dict[str, object]], output: Path, hts10: str) -> None:
     rows = [row for row in panel if row["hts10"] == hts10]
@@ -65,4 +67,4 @@ def write_pilot_chart(panel: list[dict[str, object]], output: Path, hts10: str) 
         '</svg>',
     ])
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text("\n".join(parts), encoding="utf-8")
+    write_text_lf(output, "\n".join(parts))

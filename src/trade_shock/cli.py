@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import sys
 from pathlib import Path
@@ -11,6 +10,7 @@ from pathlib import Path
 from .census import CensusClient, CensusError, load_fixture
 from .chart import write_pilot_chart
 from .harmonize import load_core_ranges, normalize_hts10
+from .io_utils import write_dict_rows_csv, write_text_lf
 from .panel import build_panel
 from .validate import ValidationError, validate_panel
 
@@ -31,11 +31,7 @@ def _local_api_key() -> str | None:
 
 
 def _write_csv(rows: list[dict[str, object]], path: Path) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
-        writer.writeheader()
-        writer.writerows(rows)
+    write_dict_rows_csv(rows, path)
 
 
 def parser() -> argparse.ArgumentParser:
@@ -79,7 +75,7 @@ def run(args: argparse.Namespace) -> dict[str, Path]:
     report_path = args.output_dir / "validation_report.json"
     chart_path = args.artifact_dir / f"pilot_{hts10}_monthly.svg"
     _write_csv(panel, panel_path)
-    report_path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    write_text_lf(report_path, json.dumps(report, indent=2) + "\n")
     write_pilot_chart(panel, chart_path, hts10)
     return {"panel": panel_path, "validation": report_path, "chart": chart_path}
 

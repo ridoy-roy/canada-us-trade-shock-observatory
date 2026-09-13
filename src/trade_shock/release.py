@@ -6,6 +6,8 @@ import html
 import json
 from pathlib import Path
 
+from .io_utils import write_text_lf
+
 
 def write_monthly_chart(rows: list[dict[str, object]], output: Path) -> None:
     width, height = 1200, 780
@@ -57,7 +59,7 @@ def write_monthly_chart(rows: list[dict[str, object]], output: Path) -> None:
         '</svg>',
     ])
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text("\n".join(parts), encoding="utf-8")
+    write_text_lf(output, "\n".join(parts))
 
 
 def write_product_decline_chart(rows: list[dict[str, object]], output: Path) -> None:
@@ -92,7 +94,7 @@ def write_product_decline_chart(rows: list[dict[str, object]], output: Path) -> 
         '</svg>',
     ])
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text("\n".join(parts), encoding="utf-8")
+    write_text_lf(output, "\n".join(parts))
 
 
 def write_release_report(
@@ -186,5 +188,5 @@ The release manifest records SHA-256 hashes for all 108 Census snapshots (96 ful
 - No causal claim is made without a control group and a formally specified counterfactual design.
 """
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(report, encoding="utf-8")
-    (output.parent / "annual_summary.json").write_text(json.dumps(annual, indent=2) + "\n", encoding="utf-8")
+    write_text_lf(output, report)
+    write_text_lf(output.parent / "annual_summary.json", json.dumps(annual, indent=2) + "\n")

@@ -7,6 +7,8 @@ import json
 from datetime import UTC, datetime
 from pathlib import Path
 
+from .io_utils import write_text_lf
+
 
 MANIFEST_SCHEMA_VERSION = 1
 
@@ -99,7 +101,7 @@ def write_release_manifest(
         ],
     }
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    write_text_lf(output, json.dumps(manifest, indent=2) + "\n")
     return manifest
 
 
